@@ -18,6 +18,13 @@
 		6E615E5029216C5300FD4C48 /* TopCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E615E4E29216C5300FD4C48 /* TopCell.xib */; };
 		6E615E5329216C5F00FD4C48 /* BottomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E615E5129216C5F00FD4C48 /* BottomCell.swift */; };
 		6E615E5429216C5F00FD4C48 /* BottomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E615E5229216C5F00FD4C48 /* BottomCell.xib */; };
+		6E6279FF2922508600925327 /* SideTown in Frameworks */ = {isa = PBXBuildFile; productRef = 6E6279FE2922508600925327 /* SideTown */; };
+		6E627A02292250BF00925327 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E627A01292250BF00925327 /* BaseViewController.swift */; };
+		6E627A042922527800925327 /* SideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E627A032922527800925327 /* SideViewController.swift */; };
+		6E627A0629225D3300925327 /* SideMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E627A0529225D3300925327 /* SideMenu.xib */; };
+		6E627A0A29226F1300925327 /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E627A0929226F1300925327 /* SearchVC.swift */; };
+		6E627A0E2922702D00925327 /* SearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E627A0C2922702D00925327 /* SearchCell.swift */; };
+		6E627A0F2922702D00925327 /* SearchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E627A0D2922702D00925327 /* SearchCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +41,12 @@
 		6E615E4E29216C5300FD4C48 /* TopCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TopCell.xib; sourceTree = "<group>"; };
 		6E615E5129216C5F00FD4C48 /* BottomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomCell.swift; sourceTree = "<group>"; };
 		6E615E5229216C5F00FD4C48 /* BottomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BottomCell.xib; sourceTree = "<group>"; };
+		6E627A01292250BF00925327 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		6E627A032922527800925327 /* SideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideViewController.swift; sourceTree = "<group>"; };
+		6E627A0529225D3300925327 /* SideMenu.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SideMenu.xib; sourceTree = "<group>"; };
+		6E627A0929226F1300925327 /* SearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVC.swift; sourceTree = "<group>"; };
+		6E627A0C2922702D00925327 /* SearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCell.swift; sourceTree = "<group>"; };
+		6E627A0D2922702D00925327 /* SearchCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E6279FF2922508600925327 /* SideTown in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,15 +80,13 @@
 		6E615E33292159B300FD4C48 /* Foodies */ = {
 			isa = PBXGroup;
 			children = (
-				6E615E4A29216BF900FD4C48 /* Main */,
-				6E615E34292159B300FD4C48 /* AppDelegate.swift */,
-				6E615E36292159B300FD4C48 /* SceneDelegate.swift */,
-				6E615E38292159B300FD4C48 /* HomeVC.swift */,
 				6E615E4829216B0E00FD4C48 /* Model.swift */,
+				6E627A00292250AD00925327 /* Side Menu */,
+				6E615E4A29216BF900FD4C48 /* Main */,
+				6E627A0829226EFF00925327 /* Search */,
 				6E615E3A292159B300FD4C48 /* Main.storyboard */,
 				6E615E3D292159B600FD4C48 /* Assets.xcassets */,
-				6E615E3F292159B600FD4C48 /* LaunchScreen.storyboard */,
-				6E615E42292159B600FD4C48 /* Info.plist */,
+				6E627A0729226ED500925327 /* Support */,
 			);
 			path = Foodies;
 			sourceTree = "<group>";
@@ -82,8 +94,9 @@
 		6E615E4A29216BF900FD4C48 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				6E615E38292159B300FD4C48 /* HomeVC.swift */,
 				6E615E4B29216C1C00FD4C48 /* TopCell */,
-				6E615E4C29216C2700FD4C48 /* BottonCell */,
+				6E615E4C29216C2700FD4C48 /* BottomCell */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -97,13 +110,52 @@
 			path = TopCell;
 			sourceTree = "<group>";
 		};
-		6E615E4C29216C2700FD4C48 /* BottonCell */ = {
+		6E615E4C29216C2700FD4C48 /* BottomCell */ = {
 			isa = PBXGroup;
 			children = (
 				6E615E5129216C5F00FD4C48 /* BottomCell.swift */,
 				6E615E5229216C5F00FD4C48 /* BottomCell.xib */,
 			);
-			path = BottonCell;
+			path = BottomCell;
+			sourceTree = "<group>";
+		};
+		6E627A00292250AD00925327 /* Side Menu */ = {
+			isa = PBXGroup;
+			children = (
+				6E627A01292250BF00925327 /* BaseViewController.swift */,
+				6E627A032922527800925327 /* SideViewController.swift */,
+				6E627A0529225D3300925327 /* SideMenu.xib */,
+			);
+			path = "Side Menu";
+			sourceTree = "<group>";
+		};
+		6E627A0729226ED500925327 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				6E615E36292159B300FD4C48 /* SceneDelegate.swift */,
+				6E615E3F292159B600FD4C48 /* LaunchScreen.storyboard */,
+				6E615E42292159B600FD4C48 /* Info.plist */,
+				6E615E34292159B300FD4C48 /* AppDelegate.swift */,
+			);
+			name = Support;
+			sourceTree = "<group>";
+		};
+		6E627A0829226EFF00925327 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				6E627A0929226F1300925327 /* SearchVC.swift */,
+				6E627A0B2922700A00925327 /* SearchCell */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		6E627A0B2922700A00925327 /* SearchCell */ = {
+			isa = PBXGroup;
+			children = (
+				6E627A0C2922702D00925327 /* SearchCell.swift */,
+				6E627A0D2922702D00925327 /* SearchCell.xib */,
+			);
+			path = SearchCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -122,6 +174,9 @@
 			dependencies = (
 			);
 			name = Foodies;
+			packageProductDependencies = (
+				6E6279FE2922508600925327 /* SideTown */,
+			);
 			productName = Foodies;
 			productReference = 6E615E31292159B300FD4C48 /* Foodies.app */;
 			productType = "com.apple.product-type.application";
@@ -150,6 +205,9 @@
 				Base,
 			);
 			mainGroup = 6E615E28292159B300FD4C48;
+			packageReferences = (
+				6E6279FD2922508600925327 /* XCRemoteSwiftPackageReference "SideTown" */,
+			);
 			productRefGroup = 6E615E32292159B300FD4C48 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -167,6 +225,8 @@
 				6E615E41292159B600FD4C48 /* LaunchScreen.storyboard in Resources */,
 				6E615E3E292159B600FD4C48 /* Assets.xcassets in Resources */,
 				6E615E5429216C5F00FD4C48 /* BottomCell.xib in Resources */,
+				6E627A0629225D3300925327 /* SideMenu.xib in Resources */,
+				6E627A0F2922702D00925327 /* SearchCell.xib in Resources */,
 				6E615E3C292159B300FD4C48 /* Main.storyboard in Resources */,
 				6E615E5029216C5300FD4C48 /* TopCell.xib in Resources */,
 			);
@@ -180,11 +240,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				6E615E5329216C5F00FD4C48 /* BottomCell.swift in Sources */,
+				6E627A0E2922702D00925327 /* SearchCell.swift in Sources */,
 				6E615E39292159B300FD4C48 /* HomeVC.swift in Sources */,
 				6E615E35292159B300FD4C48 /* AppDelegate.swift in Sources */,
+				6E627A0A29226F1300925327 /* SearchVC.swift in Sources */,
 				6E615E37292159B300FD4C48 /* SceneDelegate.swift in Sources */,
 				6E615E4F29216C5300FD4C48 /* TopCell.swift in Sources */,
+				6E627A02292250BF00925327 /* BaseViewController.swift in Sources */,
 				6E615E4929216B0E00FD4C48 /* Model.swift in Sources */,
+				6E627A042922527800925327 /* SideViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -404,6 +468,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		6E6279FD2922508600925327 /* XCRemoteSwiftPackageReference "SideTown" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sametkoyuncu/SideTown.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		6E6279FE2922508600925327 /* SideTown */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6E6279FD2922508600925327 /* XCRemoteSwiftPackageReference "SideTown" */;
+			productName = SideTown;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 6E615E29292159B300FD4C48 /* Project object */;
 }

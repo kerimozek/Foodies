@@ -18,10 +18,10 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J1P-YL-lgd">
-                        <rect key="frame" x="16" y="0.0" width="315" height="170"/>
+                        <rect key="frame" x="12" y="0.0" width="323" height="170"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pizza" translatesAutoresizingMaskIntoConstraints="NO" id="1bL-aa-txm">
-                                <rect key="frame" x="0.0" y="0.0" width="315" height="170"/>
+                                <rect key="frame" x="0.0" y="0.0" width="323" height="170"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pizza" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dgd-G5-WsL">
                                 <rect key="frame" x="12" y="137" width="58" height="21"/>
@@ -52,8 +52,8 @@
             <constraints>
                 <constraint firstItem="J1P-YL-lgd" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="b1w-la-EkX"/>
                 <constraint firstAttribute="bottom" secondItem="J1P-YL-lgd" secondAttribute="bottom" id="k67-1a-rZh"/>
-                <constraint firstItem="J1P-YL-lgd" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="16" id="kuu-iT-axb"/>
-                <constraint firstAttribute="trailing" secondItem="J1P-YL-lgd" secondAttribute="trailing" constant="16" id="t47-4b-2Oz"/>
+                <constraint firstItem="J1P-YL-lgd" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="12" id="kuu-iT-axb"/>
+                <constraint firstAttribute="trailing" secondItem="J1P-YL-lgd" secondAttribute="trailing" constant="12" id="t47-4b-2Oz"/>
             </constraints>
             <size key="customSize" width="347" height="170"/>
             <connections>

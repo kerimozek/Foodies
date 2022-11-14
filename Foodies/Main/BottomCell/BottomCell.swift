@@ -17,7 +17,7 @@ class BottomCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        bottomImageView.layer.cornerRadius = 8
+        bottomImageView.layer.cornerRadius = 10
     }
 
 }
