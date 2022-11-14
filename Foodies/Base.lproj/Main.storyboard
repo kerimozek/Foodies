@@ -73,6 +73,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="WuV-Ws-zBL"/>
+                    <connections>
+                        <outlet property="bottomCollectionView" destination="Yyv-Fb-z74" id="m4s-yD-tVc"/>
+                        <outlet property="topCollectionView" destination="p8Y-dA-ebb" id="4ZJ-ir-JBV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -239,6 +243,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="NlW-0u-1Ff" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="5xf-gu-anf">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
