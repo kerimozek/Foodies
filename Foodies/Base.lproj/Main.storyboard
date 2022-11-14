@@ -249,30 +249,33 @@
             </objects>
             <point key="canvasLocation" x="570" y="884"/>
         </scene>
-        <!--View Controller-->
+        <!--FavoritesVC-->
         <scene sceneID="idF-5R-Aqv">
             <objects>
-                <viewController id="hw5-yr-Ode" sceneMemberID="viewController">
+                <viewController id="hw5-yr-Ode" customClass="FavoritesVC" customModule="Foodies" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PKW-93-HUk">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="EI3-k1-Gx8">
-                                <rect key="frame" x="0.0" y="60" width="414" height="753"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="EI3-k1-Gx8">
+                                <rect key="frame" x="16" y="60" width="382" height="753"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="k9R-do-wnA"/>
-                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="k9R-do-wnA" firstAttribute="bottom" secondItem="EI3-k1-Gx8" secondAttribute="bottom" id="6Q1-LY-YHP"/>
-                            <constraint firstItem="k9R-do-wnA" firstAttribute="trailing" secondItem="EI3-k1-Gx8" secondAttribute="trailing" id="c8V-mP-nSH"/>
+                            <constraint firstItem="k9R-do-wnA" firstAttribute="trailing" secondItem="EI3-k1-Gx8" secondAttribute="trailing" constant="16" id="c8V-mP-nSH"/>
                             <constraint firstItem="EI3-k1-Gx8" firstAttribute="top" secondItem="k9R-do-wnA" secondAttribute="top" constant="16" id="dZI-ml-XE1"/>
-                            <constraint firstItem="EI3-k1-Gx8" firstAttribute="leading" secondItem="k9R-do-wnA" secondAttribute="leading" id="jQA-8w-Npv"/>
+                            <constraint firstItem="EI3-k1-Gx8" firstAttribute="leading" secondItem="k9R-do-wnA" secondAttribute="leading" constant="16" id="jQA-8w-Npv"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="star.fill" catalog="system" id="yB2-W5-Skx"/>
                     <navigationItem key="navigationItem" id="pJW-ze-gmD"/>
+                    <connections>
+                        <outlet property="favoritesTableView" destination="EI3-k1-Gx8" id="LZu-Na-G0Z"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xu7-gE-Lnz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
