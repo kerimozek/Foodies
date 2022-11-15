@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class BottomCell: UICollectionViewCell {
 
@@ -18,6 +19,12 @@ class BottomCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         bottomImageView.layer.cornerRadius = 10
+    }
+    
+    
+    func configureCell(item: Recipe) {
+        self.titleLabel.text = item.title
+        self.bottomImageView.kf.setImage(with: URL(string: item.url))
     }
 
 }

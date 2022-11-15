@@ -183,36 +183,6 @@
             </objects>
             <point key="canvasLocation" x="119" y="1670"/>
         </scene>
-        <!--Side View Controller-->
-        <scene sceneID="ibX-qR-FA1">
-            <objects>
-                <viewController id="krj-xz-9LZ" customClass="SideViewController" customModule="Foodies" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="vI2-fI-Hly">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8hP-BX-riC">
-                                <rect key="frame" x="20" y="64" width="50" height="31"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="sidebar.left" catalog="system"/>
-                                <connections>
-                                    <action selector="menuButtonTapped:" destination="krj-xz-9LZ" eventType="touchUpInside" id="5G4-Nf-a8M"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="Rrn-CG-7bj"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="8hP-BX-riC" firstAttribute="top" secondItem="Rrn-CG-7bj" secondAttribute="top" constant="20" id="8XC-4g-cIz"/>
-                            <constraint firstItem="Rrn-CG-7bj" firstAttribute="trailing" secondItem="8hP-BX-riC" secondAttribute="trailing" priority="999" constant="344" id="QuB-dP-tTF"/>
-                            <constraint firstItem="8hP-BX-riC" firstAttribute="leading" secondItem="Rrn-CG-7bj" secondAttribute="leading" constant="20" id="iOc-EJ-jMm"/>
-                        </constraints>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="j9R-yv-iZe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1128" y="1669"/>
-        </scene>
         <!--View Controller-->
         <scene sceneID="eWG-ez-pVW">
             <objects>
@@ -323,7 +293,6 @@
         <image name="arrow.left.arrow.right" catalog="system" width="119" height="128"/>
         <image name="house.fill" catalog="system" width="128" height="106"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
-        <image name="sidebar.left" catalog="system" width="128" height="93"/>
         <image name="star.fill" catalog="system" width="128" height="116"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

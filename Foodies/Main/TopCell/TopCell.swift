@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class TopCell: UICollectionViewCell {
 
@@ -19,4 +20,8 @@ class TopCell: UICollectionViewCell {
         topCellImageView.layer.cornerRadius = 8
     }
 
+    func configureCell(item: Recipe) {
+        self.nameLabel.text = item.title
+        self.topCellImageView.kf.setImage(with: URL(string: item.url))
+    }
 }
