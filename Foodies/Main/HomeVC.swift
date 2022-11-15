@@ -18,9 +18,7 @@ class HomeVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
-        NetworkManager.shared.delegate = self
-        NetworkManager.shared.fetchData()
-        NetworkManager.shared.getData()
+        
     }
 
     private func setupUI() {
@@ -32,6 +30,9 @@ class HomeVC: UIViewController {
         self.view.addSubview(bottomCollectionView)
         topCollectionView.register(.init(nibName: "TopCell", bundle: nil), forCellWithReuseIdentifier: topCollectionViewID)
         bottomCollectionView.register(.init(nibName: "BottomCell", bundle: nil), forCellWithReuseIdentifier: bottomCollectionViewID)
+        NetworkManager.shared.delegate = self
+        NetworkManager.shared.fetchData()
+        NetworkManager.shared.getData()
     }
 }
 

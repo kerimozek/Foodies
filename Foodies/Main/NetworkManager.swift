@@ -36,7 +36,6 @@ class NetworkManager {
             do {
                 self.photos = try JSONDecoder().decode([Recipe].self, from: data)
                 self.photos = self.photos.filter{ $0.id < 31 }
-                print(self.photos.count)
                 self.delegate?.didFetchData(isDone: true)
             } catch {
                 print(error.localizedDescription)
@@ -59,7 +58,6 @@ class NetworkManager {
             do {
                 self.sweets = try JSONDecoder().decode([Recipe].self, from: data)
                 self.sweets = self.sweets.filter{ $0.id > 4969 }
-                print(self.photos.count)
                 self.delegate?.didGetData(isDone: true)
             } catch {
                 print(error.localizedDescription)

@@ -6,11 +6,10 @@
 //
 
 import UIKit
+import Kingfisher
 
 class SearchCell: UITableViewCell {
 
-    
-  
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var minuteLabel: UILabel!
     @IBOutlet weak var pointLabel: UILabel!
@@ -24,6 +23,9 @@ class SearchCell: UITableViewCell {
     
     }
 
-   
+    func configureCell(item: Recipe) {
+        self.titleLabel.text = item.title
+        self.searchImageView.kf.setImage(with: URL(string: item.url))
+    }
     
 }
