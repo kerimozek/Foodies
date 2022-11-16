@@ -20,7 +20,7 @@ class NetworkManager {
     private init () { }
     
     var photos: [Recipe] = []
-    var sweets: [Recipe] = []
+    var sweets: [Result] = []
     
     func fetchData() {
         
@@ -46,7 +46,7 @@ class NetworkManager {
     
     func getData() {
         
-        guard let url = URL.init(string: "https://jsonplaceholder.typicode.com/photos") else { return }
+        guard let url = URL.init(string: "https://api.spoonacular.com/recipes/complexSearch?apiKey=6190a837e2cd420cbf41a6b7d5a14eb6") else { return }
         
         let request: URLRequest = .init(url: url)
         let task = URLSession.shared.dataTask(with: request) { [weak self] data, response, error in
@@ -56,8 +56,10 @@ class NetworkManager {
             guard let data = data else { return }
             
             do {
-                self.sweets = try JSONDecoder().decode([Recipe].self, from: data)
-                self.sweets = self.sweets.filter{ $0.id > 4969 }
+                print("lollik")
+                let recipeNew = try JSONDecoder().decode(RecipeNew.self, from: data)
+                self.sweets = recipeNew.results!
+                print(self.sweets)
                 self.delegate?.didGetData(isDone: true)
             } catch {
                 print(error.localizedDescription)
@@ -66,4 +68,9 @@ class NetworkManager {
         task.resume()
     }
     
+    
 }
+
+
+
+

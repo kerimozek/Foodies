@@ -33,17 +33,26 @@ class HomeVC: UIViewController {
         NetworkManager.shared.delegate = self
         NetworkManager.shared.fetchData()
         NetworkManager.shared.getData()
+        
     }
+    
+//    override func viewWillAppear(_ animated: Bool) {
+//        DispatchQueue.main.async {
+//            self.bottomCollectionView.reloadData()
+//            self.topCollectionView.reloadData()
+//        }
+//    }
+    
 }
 
 extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView == self.topCollectionView {
-            return NetworkManager.shared.sweets.count // Replace with count of your data for topCollectionView
+            return NetworkManager.shared.photos.count
             }
 
-        return NetworkManager.shared.photos.count // Replace with count of your data for bottomCollectionViewID
+        return NetworkManager.shared.sweets.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -52,15 +61,15 @@ extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollec
             
             let cellA = collectionView.dequeueReusableCell(withReuseIdentifier: topCollectionViewID, for: indexPath) as! TopCell
             
-            let item = NetworkManager.shared.sweets[indexPath.row]
+            let item = NetworkManager.shared.photos[indexPath.row]
             cellA.configureCell(item: item)
             cellA.backgroundColor = UIColor.clear
             return cellA
         } else {
             let cellB = collectionView.dequeueReusableCell(withReuseIdentifier: bottomCollectionViewID, for: indexPath) as! BottomCell
-            
-            let item = NetworkManager.shared.photos[indexPath.row]
-            cellB.configureCell(item: item)
+        
+            let item = NetworkManager.shared.sweets[indexPath.item]
+            cellB.configureCell(item: item, indexPath: indexPath)
             cellB.backgroundColor = UIColor.clear
             return cellB
         }
@@ -81,16 +90,15 @@ extension HomeVC: NetworkManagerDelegate {
     func didFetchData(isDone: Bool) {
         if isDone {
             DispatchQueue.main.async {
-                self.bottomCollectionView.reloadData()
+                self.topCollectionView.reloadData()
             }
         }
     }
-
-    
+ 
     func didGetData(isDone: Bool) {
         if isDone {
             DispatchQueue.main.async {
-                self.topCollectionView.reloadData()
+                self.bottomCollectionView.reloadData()
             }
         }
     }

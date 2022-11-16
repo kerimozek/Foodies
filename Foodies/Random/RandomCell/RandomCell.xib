@@ -10,48 +10,49 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="174" id="KGk-i7-Jjw" customClass="RandomCell" customModule="Foodies" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="372" height="174"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="262" id="KGk-i7-Jjw" customClass="RandomCell" customModule="Foodies" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="372" height="262"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="372" height="174"/>
+                <rect key="frame" x="0.0" y="0.0" width="372" height="262"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zjX-zE-yPq">
-                        <rect key="frame" x="0.0" y="0.0" width="372" height="174"/>
+                        <rect key="frame" x="16" y="8" width="340" height="246"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sib-mv-kvw">
-                        <rect key="frame" x="16" y="8" width="340" height="130"/>
+                        <rect key="frame" x="16" y="8" width="340" height="214"/>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YKR-d7-q17">
-                        <rect key="frame" x="16" y="146" width="340" height="24"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YKR-d7-q17">
+                        <rect key="frame" x="16" y="230" width="340" height="24"/>
                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="trailing" secondItem="YKR-d7-q17" secondAttribute="trailing" constant="16" id="3HH-ta-YZw"/>
-                    <constraint firstAttribute="trailing" secondItem="sib-mv-kvw" secondAttribute="trailing" constant="16" id="9HG-d7-cIk"/>
-                    <constraint firstItem="sib-mv-kvw" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="PJH-bj-nAV"/>
-                    <constraint firstItem="YKR-d7-q17" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="QaK-Uu-PDS"/>
+                    <constraint firstAttribute="trailing" secondItem="sib-mv-kvw" secondAttribute="trailing" constant="16" id="3ZT-mO-HsK"/>
+                    <constraint firstItem="sib-mv-kvw" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="4tb-mL-2hM"/>
+                    <constraint firstAttribute="trailing" secondItem="YKR-d7-q17" secondAttribute="trailing" constant="16" id="8Ie-ca-K9H"/>
+                    <constraint firstItem="YKR-d7-q17" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="FS0-M8-k7l"/>
+                    <constraint firstItem="sib-mv-kvw" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="KMz-Kl-lhe"/>
+                    <constraint firstAttribute="bottom" secondItem="zjX-zE-yPq" secondAttribute="bottom" constant="8" id="Lpe-tF-o87"/>
                     <constraint firstItem="YKR-d7-q17" firstAttribute="top" secondItem="sib-mv-kvw" secondAttribute="bottom" constant="8" id="Roq-rg-PDN"/>
-                    <constraint firstItem="zjX-zE-yPq" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Rrm-5Y-jtD"/>
-                    <constraint firstAttribute="trailing" secondItem="zjX-zE-yPq" secondAttribute="trailing" id="XCS-Er-Kzh"/>
-                    <constraint firstAttribute="bottom" secondItem="zjX-zE-yPq" secondAttribute="bottom" id="fuu-vU-XUR"/>
-                    <constraint firstItem="zjX-zE-yPq" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="uxf-4g-ukO"/>
-                    <constraint firstItem="sib-mv-kvw" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="v8Q-NQ-rli"/>
-                    <constraint firstAttribute="bottom" secondItem="YKR-d7-q17" secondAttribute="bottom" constant="4" id="wuJ-Qp-LIX"/>
+                    <constraint firstItem="zjX-zE-yPq" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="YAI-bk-GDj"/>
+                    <constraint firstItem="zjX-zE-yPq" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="eLn-d7-Fo5"/>
+                    <constraint firstAttribute="trailing" secondItem="zjX-zE-yPq" secondAttribute="trailing" constant="16" id="pO7-vC-snS"/>
+                    <constraint firstItem="zjX-zE-yPq" firstAttribute="bottom" secondItem="YKR-d7-q17" secondAttribute="bottom" id="qUy-Rs-xfv"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
                 <outlet property="randomImageView" destination="sib-mv-kvw" id="eSD-NT-282"/>
                 <outlet property="randomTitle" destination="YKR-d7-q17" id="Mpz-9m-8eJ"/>
                 <outlet property="randomView" destination="zjX-zE-yPq" id="eRp-Vp-j15"/>
             </connections>
-            <point key="canvasLocation" x="169.56521739130437" y="172.76785714285714"/>
+            <point key="canvasLocation" x="169.56521739130437" y="142.63392857142856"/>
         </tableViewCell>
     </objects>
     <resources>

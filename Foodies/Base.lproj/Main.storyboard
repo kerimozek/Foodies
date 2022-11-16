@@ -49,7 +49,7 @@
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Yyv-Fb-z74">
                                 <rect key="frame" x="0.0" y="328" width="414" height="485"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="xUf-Uk-mAo">
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="8" minimumInteritemSpacing="8" id="xUf-Uk-mAo">
                                     <size key="itemSize" width="128" height="128"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -59,7 +59,7 @@
                             </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.94117647058823528" green="0.94901960784313721" blue="0.94901960784313721" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="p8Y-dA-ebb" secondAttribute="trailing" id="A4I-J3-o2s"/>
                             <constraint firstItem="Q39-Md-8qQ" firstAttribute="top" secondItem="p8Y-dA-ebb" secondAttribute="bottom" constant="16" id="ANd-mx-L36"/>
@@ -114,7 +114,7 @@
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="PKV-V6-4cI"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.94117647059999998" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="91o-s3-Qxr" firstAttribute="centerY" secondItem="Ojy-fx-WTp" secondAttribute="centerY" id="49Y-IT-2IQ"/>
                             <constraint firstItem="PKV-V6-4cI" firstAttribute="bottom" secondItem="wWn-Dx-SKC" secondAttribute="bottom" id="D4t-lw-iNZ"/>
@@ -210,7 +210,7 @@
                                     </button>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="7qe-kH-hor">
                                         <rect key="frame" x="0.0" y="16" width="414" height="692"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </tableView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -226,7 +226,7 @@
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="r5y-MS-v57"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.94117647059999998" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="r5y-MS-v57" firstAttribute="trailing" secondItem="Y6N-1N-W6r" secondAttribute="trailing" id="2QF-Z6-c6a"/>
                             <constraint firstItem="r5y-MS-v57" firstAttribute="bottom" secondItem="Y6N-1N-W6r" secondAttribute="bottom" id="3Qo-Sh-wRj"/>
@@ -254,17 +254,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="EI3-k1-Gx8">
-                                <rect key="frame" x="16" y="60" width="382" height="753"/>
+                                <rect key="frame" x="0.0" y="60" width="414" height="753"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="k9R-do-wnA"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.94117647059999998" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="k9R-do-wnA" firstAttribute="bottom" secondItem="EI3-k1-Gx8" secondAttribute="bottom" id="6Q1-LY-YHP"/>
-                            <constraint firstItem="k9R-do-wnA" firstAttribute="trailing" secondItem="EI3-k1-Gx8" secondAttribute="trailing" constant="16" id="c8V-mP-nSH"/>
+                            <constraint firstItem="k9R-do-wnA" firstAttribute="trailing" secondItem="EI3-k1-Gx8" secondAttribute="trailing" id="c8V-mP-nSH"/>
                             <constraint firstItem="EI3-k1-Gx8" firstAttribute="top" secondItem="k9R-do-wnA" secondAttribute="top" constant="16" id="dZI-ml-XE1"/>
-                            <constraint firstItem="EI3-k1-Gx8" firstAttribute="leading" secondItem="k9R-do-wnA" secondAttribute="leading" constant="16" id="jQA-8w-Npv"/>
+                            <constraint firstItem="EI3-k1-Gx8" firstAttribute="leading" secondItem="k9R-do-wnA" secondAttribute="leading" id="jQA-8w-Npv"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="star.fill" catalog="system" id="yB2-W5-Skx"/>

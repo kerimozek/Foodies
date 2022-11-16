@@ -18,13 +18,26 @@ class BottomCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        
         bottomImageView.layer.cornerRadius = 10
+        bottomView.layer.cornerRadius = 10
+        bottomView.clipsToBounds = true
+
+        // Configure the cell
+        self.layer.cornerRadius = 15.0
+        self.layer.borderWidth = 0.0
+        self.layer.shadowColor = UIColor.black.withAlphaComponent(0.2).cgColor
+        self.layer.shadowOffset = CGSize(width: 0, height: 0)
+        self.layer.shadowRadius = 5.0
+        self.layer.shadowOpacity = 1
+        self.layer.masksToBounds = false
+        
     }
     
     
-    func configureCell(item: Recipe) {
+    func configureCell(item: Result, indexPath: IndexPath) {
         self.titleLabel.text = item.title
-        self.bottomImageView.kf.setImage(with: URL(string: item.url))
+        self.bottomImageView.kf.setImage(with: URL(string: item.image!))
     }
 
 }

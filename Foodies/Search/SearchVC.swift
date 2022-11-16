@@ -19,6 +19,7 @@ class SearchVC: UIViewController {
         setupUI()
     }
 
+
     private func setupUI() {
         
         searchTableView.dataSource = self
@@ -49,6 +50,7 @@ extension SearchVC: UITableViewDelegate, UITableViewDataSource {
         cell.selectedBackgroundView = backgroundView
         return cell
     }
+
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("clicked")
