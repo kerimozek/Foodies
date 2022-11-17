@@ -23,25 +23,16 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" image="Pasta-1" translatesAutoresizingMaskIntoConstraints="NO" id="N4S-gY-vcj">
                                 <rect key="frame" x="0.0" y="0.0" width="200" height="157"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="252" horizontalCompressionResistancePriority="752" verticalCompressionResistancePriority="752" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hdd-8g-u6k">
-                                <rect key="frame" x="2" y="165" width="196" height="22"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="22" id="wLg-8z-8Wk"/>
-                                </constraints>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="253" verticalHuggingPriority="253" horizontalCompressionResistancePriority="753" verticalCompressionResistancePriority="753" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hdd-8g-u6k">
+                                <rect key="frame" x="2" y="165" width="196" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZKD-HW-aBD">
-                                <rect key="frame" x="2" y="191" width="31" height="32.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ir-8j-YhY">
                                 <rect key="frame" x="161" y="231.5" width="31" height="14.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -51,16 +42,14 @@
                             <constraint firstAttribute="trailing" secondItem="8ir-8j-YhY" secondAttribute="trailing" constant="8" id="4lR-fi-tbp"/>
                             <constraint firstAttribute="bottom" secondItem="8ir-8j-YhY" secondAttribute="bottom" constant="8" id="AHh-pb-xbO"/>
                             <constraint firstItem="N4S-gY-vcj" firstAttribute="height" secondItem="CLS-iO-GmW" secondAttribute="height" multiplier="0.61811" id="EOf-tv-dCo"/>
-                            <constraint firstItem="ZKD-HW-aBD" firstAttribute="leading" secondItem="CLS-iO-GmW" secondAttribute="leading" constant="2" id="EpZ-wR-LWq"/>
-                            <constraint firstItem="ZKD-HW-aBD" firstAttribute="top" relation="lessThanOrEqual" secondItem="Hdd-8g-u6k" secondAttribute="bottom" constant="4" id="MXY-5b-fd6"/>
                             <constraint firstAttribute="width" constant="200" id="NO9-F4-asN"/>
                             <constraint firstAttribute="trailing" secondItem="Hdd-8g-u6k" secondAttribute="trailing" constant="2" id="NzA-xn-QeP"/>
+                            <constraint firstItem="8ir-8j-YhY" firstAttribute="top" relation="lessThanOrEqual" secondItem="Hdd-8g-u6k" secondAttribute="bottom" constant="46" id="Rwe-qt-YTz"/>
                             <constraint firstItem="Hdd-8g-u6k" firstAttribute="leading" secondItem="CLS-iO-GmW" secondAttribute="leading" constant="2" id="Xxk-nb-tVF"/>
                             <constraint firstItem="N4S-gY-vcj" firstAttribute="top" secondItem="CLS-iO-GmW" secondAttribute="top" id="dDJ-eJ-NLZ"/>
                             <constraint firstItem="N4S-gY-vcj" firstAttribute="leading" secondItem="CLS-iO-GmW" secondAttribute="leading" id="dVE-Cp-1AP"/>
                             <constraint firstAttribute="height" constant="254" id="lHW-7J-bOE"/>
                             <constraint firstAttribute="trailing" secondItem="N4S-gY-vcj" secondAttribute="trailing" id="uoP-hZ-odd"/>
-                            <constraint firstItem="8ir-8j-YhY" firstAttribute="top" secondItem="ZKD-HW-aBD" secondAttribute="bottom" constant="8" id="wUY-a3-dYG"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -77,7 +66,6 @@
             <connections>
                 <outlet property="bottomImageView" destination="N4S-gY-vcj" id="faO-lz-sIe"/>
                 <outlet property="bottomView" destination="CLS-iO-GmW" id="AdU-Jq-GhS"/>
-                <outlet property="detailLabel" destination="ZKD-HW-aBD" id="Onw-OI-gni"/>
                 <outlet property="pointLabel" destination="8ir-8j-YhY" id="5JS-BB-rW6"/>
                 <outlet property="titleLabel" destination="Hdd-8g-u6k" id="oC0-Ef-8T8"/>
             </connections>

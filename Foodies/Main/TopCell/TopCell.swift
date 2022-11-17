@@ -18,11 +18,15 @@ class TopCell: UICollectionViewCell {
         super.awakeFromNib()
         topCellView.layer.cornerRadius = 8
         topCellView.layer.masksToBounds = false
+        topCellView.backgroundColor = UIColor(red: 0.11, green: 0.13, blue: 0.15, alpha: 0.7)
         topCellImageView.layer.cornerRadius = 8
+        nameLabel.backgroundColor = UIColor(red: 0.11, green: 0.13, blue: 0.15, alpha: 0.2)
+        nameLabel.layer.masksToBounds = true
+        nameLabel.layer.cornerRadius = 5
         
         self.layer.cornerRadius = 15.0
         self.layer.borderWidth = 0.0
-        self.layer.shadowColor = UIColor.black.withAlphaComponent(0.2).cgColor
+        self.layer.shadowColor = UIColor.black.withAlphaComponent(0.3).cgColor
         self.layer.shadowOffset = CGSize(width: 0, height: 0)
         self.layer.shadowRadius = 5.0
         self.layer.shadowOpacity = 1
