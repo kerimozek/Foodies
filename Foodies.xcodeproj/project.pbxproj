@@ -23,13 +23,12 @@
 		6E627A0A29226F1300925327 /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E627A0929226F1300925327 /* SearchVC.swift */; };
 		6E627A0E2922702D00925327 /* SearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E627A0C2922702D00925327 /* SearchCell.swift */; };
 		6E627A0F2922702D00925327 /* SearchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E627A0D2922702D00925327 /* SearchCell.xib */; };
-		6E6A374729240E1700E1EFCC /* SearchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6A374629240E1700E1EFCC /* SearchModel.swift */; };
 		6E6A374929240E4600E1EFCC /* SearchNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6A374829240E4600E1EFCC /* SearchNetworkManager.swift */; };
 		6E6A374C2924135600E1EFCC /* RandomVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6A374B2924135600E1EFCC /* RandomVC.swift */; };
 		6E6A37502924173B00E1EFCC /* RandomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6A374E2924173B00E1EFCC /* RandomCell.swift */; };
 		6E6A37512924173B00E1EFCC /* RandomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E6A374F2924173B00E1EFCC /* RandomCell.xib */; };
 		6E6A37532924177A00E1EFCC /* RandomNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6A37522924177A00E1EFCC /* RandomNetworkManager.swift */; };
-		6EB5B2782922BD5000C2ACFF /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB5B2772922BD5000C2ACFF /* NetworkManager.swift */; };
+		6EB5B2782922BD5000C2ACFF /* MainNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB5B2772922BD5000C2ACFF /* MainNetworkManager.swift */; };
 		6EEDBFAB2922C88300D7F07A /* FavoritesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EEDBFAA2922C88300D7F07A /* FavoritesVC.swift */; };
 		6EEDBFAE2922C90C00D7F07A /* FavoritesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EEDBFAC2922C90C00D7F07A /* FavoritesCell.swift */; };
 		6EEDBFAF2922C90C00D7F07A /* FavoritesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6EEDBFAD2922C90C00D7F07A /* FavoritesCell.xib */; };
@@ -52,13 +51,12 @@
 		6E627A0929226F1300925327 /* SearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVC.swift; sourceTree = "<group>"; };
 		6E627A0C2922702D00925327 /* SearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCell.swift; sourceTree = "<group>"; };
 		6E627A0D2922702D00925327 /* SearchCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchCell.xib; sourceTree = "<group>"; };
-		6E6A374629240E1700E1EFCC /* SearchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchModel.swift; sourceTree = "<group>"; };
 		6E6A374829240E4600E1EFCC /* SearchNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchNetworkManager.swift; sourceTree = "<group>"; };
 		6E6A374B2924135600E1EFCC /* RandomVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomVC.swift; sourceTree = "<group>"; };
 		6E6A374E2924173B00E1EFCC /* RandomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomCell.swift; sourceTree = "<group>"; };
 		6E6A374F2924173B00E1EFCC /* RandomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RandomCell.xib; sourceTree = "<group>"; };
 		6E6A37522924177A00E1EFCC /* RandomNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomNetworkManager.swift; sourceTree = "<group>"; };
-		6EB5B2772922BD5000C2ACFF /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		6EB5B2772922BD5000C2ACFF /* MainNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNetworkManager.swift; sourceTree = "<group>"; };
 		6EEDBFAA2922C88300D7F07A /* FavoritesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesVC.swift; sourceTree = "<group>"; };
 		6EEDBFAC2922C90C00D7F07A /* FavoritesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesCell.swift; sourceTree = "<group>"; };
 		6EEDBFAD2922C90C00D7F07A /* FavoritesCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoritesCell.xib; sourceTree = "<group>"; };
@@ -96,6 +94,7 @@
 		6E615E33292159B300FD4C48 /* Foodies */ = {
 			isa = PBXGroup;
 			children = (
+				6E615E4829216B0E00FD4C48 /* Model.swift */,
 				6E615E4A29216BF900FD4C48 /* Main */,
 				6E627A0829226EFF00925327 /* Search */,
 				6E6A374A2924133700E1EFCC /* Random */,
@@ -110,8 +109,7 @@
 		6E615E4A29216BF900FD4C48 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				6EB5B2772922BD5000C2ACFF /* NetworkManager.swift */,
-				6E615E4829216B0E00FD4C48 /* Model.swift */,
+				6EB5B2772922BD5000C2ACFF /* MainNetworkManager.swift */,
 				6E615E38292159B300FD4C48 /* HomeVC.swift */,
 				6E615E4B29216C1C00FD4C48 /* TopCell */,
 				6E615E4C29216C2700FD4C48 /* BottomCell */,
@@ -153,7 +151,6 @@
 			children = (
 				6E627A0929226F1300925327 /* SearchVC.swift */,
 				6E6A374829240E4600E1EFCC /* SearchNetworkManager.swift */,
-				6E6A374629240E1700E1EFCC /* SearchModel.swift */,
 				6E627A0B2922700A00925327 /* SearchCell */,
 			);
 			path = Search;
@@ -293,9 +290,8 @@
 				6E627A0E2922702D00925327 /* SearchCell.swift in Sources */,
 				6E615E39292159B300FD4C48 /* HomeVC.swift in Sources */,
 				6E6A374C2924135600E1EFCC /* RandomVC.swift in Sources */,
-				6E6A374729240E1700E1EFCC /* SearchModel.swift in Sources */,
 				6E615E35292159B300FD4C48 /* AppDelegate.swift in Sources */,
-				6EB5B2782922BD5000C2ACFF /* NetworkManager.swift in Sources */,
+				6EB5B2782922BD5000C2ACFF /* MainNetworkManager.swift in Sources */,
 				6E627A0A29226F1300925327 /* SearchVC.swift in Sources */,
 				6EEDBFAE2922C90C00D7F07A /* FavoritesCell.swift in Sources */,
 				6E615E37292159B300FD4C48 /* SceneDelegate.swift in Sources */,

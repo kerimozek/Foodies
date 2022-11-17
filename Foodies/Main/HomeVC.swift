@@ -30,18 +30,11 @@ class HomeVC: UIViewController {
         self.view.addSubview(bottomCollectionView)
         topCollectionView.register(.init(nibName: "TopCell", bundle: nil), forCellWithReuseIdentifier: topCollectionViewID)
         bottomCollectionView.register(.init(nibName: "BottomCell", bundle: nil), forCellWithReuseIdentifier: bottomCollectionViewID)
-        NetworkManager.shared.delegate = self
-        NetworkManager.shared.fetchData()
-        NetworkManager.shared.getData()
+        MainNetworkManager.shared.delegate = self
+        MainNetworkManager.shared.fetchData()
+        MainNetworkManager.shared.getData()
         
     }
-    
-//    override func viewWillAppear(_ animated: Bool) {
-//        DispatchQueue.main.async {
-//            self.bottomCollectionView.reloadData()
-//            self.topCollectionView.reloadData()
-//        }
-//    }
     
 }
 
@@ -49,10 +42,10 @@ extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollec
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView == self.topCollectionView {
-            return NetworkManager.shared.photos.count
+            return MainNetworkManager.shared.breakfast.count
             }
 
-        return NetworkManager.shared.sweets.count
+        return MainNetworkManager.shared.sweets.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -61,15 +54,15 @@ extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollec
             
             let cellA = collectionView.dequeueReusableCell(withReuseIdentifier: topCollectionViewID, for: indexPath) as! TopCell
             
-            let item = NetworkManager.shared.photos[indexPath.row]
+            let item = MainNetworkManager.shared.breakfast[indexPath.item]
             cellA.configureCell(item: item)
             cellA.backgroundColor = UIColor.clear
             return cellA
         } else {
             let cellB = collectionView.dequeueReusableCell(withReuseIdentifier: bottomCollectionViewID, for: indexPath) as! BottomCell
         
-            let item = NetworkManager.shared.sweets[indexPath.item]
-            cellB.configureCell(item: item, indexPath: indexPath)
+            let item = MainNetworkManager.shared.sweets[indexPath.item]
+            cellB.configureCell(item: item)
             cellB.backgroundColor = UIColor.clear
             return cellB
         }

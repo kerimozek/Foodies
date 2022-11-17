@@ -35,8 +35,9 @@ class SearchCell: UITableViewCell {
     }
 
     func configureCell(item: Recipe) {
+        let image = "https://i.dlpng.com/static/png/7210818_preview.png"
         self.titleLabel.text = item.title
-        self.searchImageView.kf.setImage(with: URL(string: item.url))
+        self.searchImageView.kf.setImage(with: URL(string: item.image ?? image))
     }
     
 }

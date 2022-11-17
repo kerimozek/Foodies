@@ -23,7 +23,6 @@ class BottomCell: UICollectionViewCell {
         bottomView.layer.cornerRadius = 10
         bottomView.clipsToBounds = true
 
-        // Configure the cell
         self.layer.cornerRadius = 15.0
         self.layer.borderWidth = 0.0
         self.layer.shadowColor = UIColor.black.withAlphaComponent(0.2).cgColor
@@ -35,9 +34,10 @@ class BottomCell: UICollectionViewCell {
     }
     
     
-    func configureCell(item: Result, indexPath: IndexPath) {
+    func configureCell(item: Result) {
+        let image = "https://i.dlpng.com/static/png/7210818_preview.png"
         self.titleLabel.text = item.title
-        self.bottomImageView.kf.setImage(with: URL(string: item.image!))
+        self.bottomImageView.kf.setImage(with: URL(string: item.image ?? image))
     }
 
 }

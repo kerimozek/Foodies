@@ -30,7 +30,8 @@ class TopCell: UICollectionViewCell {
     }
 
     func configureCell(item: Recipe) {
+        let image = "https://i.dlpng.com/static/png/7210818_preview.png"
         self.nameLabel.text = item.title
-        self.topCellImageView.kf.setImage(with: URL(string: item.url))
+        self.topCellImageView.kf.setImage(with: URL(string: item.image ?? image))
     }
 }

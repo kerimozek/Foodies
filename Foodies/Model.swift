@@ -6,7 +6,7 @@
 import Foundation
 
 // MARK: - Recipe
-struct Recipe: Codable {
+struct FakeData: Codable {
     let albumID, id: Int
     let title: String
     let url, thumbnailURL: String
@@ -19,25 +19,30 @@ struct Recipe: Codable {
 }
 
 
-// MARK: - RecipeNew -
+// MARK: - MainModel -
 struct RecipeNew: Codable {
     let results: [Result]?
-    let offset, number, totalResults: Int?
 }
 
-// MARK: - Result
 struct Result: Codable {
     let id: Int?
     let title: String?
     let image: String?
-    let imageType: ImageType?
-}
-
-enum ImageType: String, Codable {
-    case jpg = "jpg"
 }
 
 
+// MARK: - SearchModel -
 
+struct SearchRecipes: Codable {
+    let recipes: [Recipe]?
+}
+
+// MARK: - Recipe
+struct Recipe: Codable {
+    let id: Int?
+    let title: String?
+    let image: String?
+
+}
 
 

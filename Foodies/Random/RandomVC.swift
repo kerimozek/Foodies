@@ -33,9 +33,9 @@ class RandomVC: UIViewController {
         randomTableView.dataSource = self
         randomTableView.register(.init(nibName: "RandomCell", bundle: nil), forCellReuseIdentifier: randomTableViewCell)
         RandomNetworkManager.shared.delegate = self
-        RandomNetworkManager.shared.getDinnerData()
-        RandomNetworkManager.shared.getDrinkData()
-        RandomNetworkManager.shared.getSweetData()
+        RandomNetworkManager.shared.getBreakfast()
+//        RandomNetworkManager.shared.getDinner()
+//        RandomNetworkManager.shared.getSweets()
     }
 
     @IBAction func shuffleButtonTapped(_ sender: Any) {
@@ -46,7 +46,7 @@ class RandomVC: UIViewController {
         medetcan.removeAll()
         let itemDinner = RandomNetworkManager.shared.dinner.shuffled().first
         let itemSweet = RandomNetworkManager.shared.sweets.shuffled().first
-        let itemDrink = RandomNetworkManager.shared.drink.shuffled().first
+        let itemDrink = RandomNetworkManager.shared.breakfast.shuffled().first
         medetcan.append(itemDinner!)
         medetcan.append(itemSweet!)
         medetcan.append(itemDrink!)
@@ -85,21 +85,21 @@ extension RandomVC: UITableViewDelegate, UITableViewDataSource {
 
 extension RandomVC: RandomNetworkManagerDelegate {
     
-    func getDinnerData(isDone: Bool) {
+//    func getDinnerData(isDone: Bool) {
+//        if isDone {
+//            count += 1
+//        }
+//    }
+//
+//    func getSweetsData(isDone: Bool) {
+//        if isDone {
+//            count += 1
+//        }
+//    }
+//
+    func getBreakfastData(isDone: Bool) {
         if isDone {
-            count += 1
-        }
-    }
-    
-    func getSweetData(isDone: Bool) {
-        if isDone {
-            count += 1
-        }
-    }
-    
-    func getDrinkData(isDone: Bool) {
-        if isDone {
-            count += 1
+            count += 3
         }
     }
 
