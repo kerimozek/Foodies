@@ -199,11 +199,8 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="769"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vFd-EY-fyv">
-                                        <rect key="frame" x="56" y="720" width="302" height="40"/>
+                                        <rect key="frame" x="56" y="721" width="302" height="40"/>
                                         <color key="backgroundColor" systemColor="systemCyanColor"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="hJC-jS-dKv"/>
-                                        </constraints>
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Shuffle">
                                             <fontDescription key="titleFontDescription" type="boldSystem" pointSize="20"/>
@@ -220,12 +217,13 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="7qe-kH-hor" firstAttribute="leading" secondItem="Y6N-1N-W6r" secondAttribute="leading" id="TXF-0k-1Pn"/>
+                                    <constraint firstAttribute="bottom" secondItem="vFd-EY-fyv" secondAttribute="bottom" constant="8" id="U2Y-Rz-tnn"/>
                                     <constraint firstItem="7qe-kH-hor" firstAttribute="top" secondItem="Y6N-1N-W6r" secondAttribute="top" constant="16" id="Xgm-Gb-9BF"/>
                                     <constraint firstAttribute="trailing" secondItem="7qe-kH-hor" secondAttribute="trailing" id="ZhC-kH-Oqu"/>
                                     <constraint firstItem="7qe-kH-hor" firstAttribute="height" secondItem="Y6N-1N-W6r" secondAttribute="height" multiplier="0.9" id="cba-Bf-Wwf"/>
                                     <constraint firstItem="vFd-EY-fyv" firstAttribute="leading" secondItem="Y6N-1N-W6r" secondAttribute="leading" constant="56" id="hAb-Yt-tH8"/>
                                     <constraint firstAttribute="trailing" secondItem="vFd-EY-fyv" secondAttribute="trailing" constant="56" id="oAI-ww-j8n"/>
-                                    <constraint firstItem="vFd-EY-fyv" firstAttribute="top" secondItem="7qe-kH-hor" secondAttribute="bottom" constant="12" id="psV-KH-Pzk"/>
+                                    <constraint firstItem="vFd-EY-fyv" firstAttribute="top" secondItem="7qe-kH-hor" secondAttribute="bottom" constant="13" id="ofu-n6-sk1"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -233,9 +231,12 @@
                         <color key="backgroundColor" red="0.94117647059999998" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="r5y-MS-v57" firstAttribute="trailing" secondItem="Y6N-1N-W6r" secondAttribute="trailing" id="2QF-Z6-c6a"/>
-                            <constraint firstItem="r5y-MS-v57" firstAttribute="bottom" secondItem="Y6N-1N-W6r" secondAttribute="bottom" id="3Qo-Sh-wRj"/>
+                            <constraint firstItem="Y6N-1N-W6r" firstAttribute="trailing" secondItem="r5y-MS-v57" secondAttribute="trailing" id="6AX-EN-2Go"/>
+                            <constraint firstItem="r5y-MS-v57" firstAttribute="bottom" secondItem="Y6N-1N-W6r" secondAttribute="bottom" id="N27-Xl-veW"/>
                             <constraint firstItem="Y6N-1N-W6r" firstAttribute="top" secondItem="r5y-MS-v57" secondAttribute="top" id="Nij-gN-a5W"/>
+                            <constraint firstItem="Y6N-1N-W6r" firstAttribute="top" secondItem="r5y-MS-v57" secondAttribute="top" id="OUg-eN-GS2"/>
                             <constraint firstItem="Y6N-1N-W6r" firstAttribute="leading" secondItem="r5y-MS-v57" secondAttribute="leading" id="kT1-EP-cdC"/>
+                            <constraint firstItem="Y6N-1N-W6r" firstAttribute="leading" secondItem="r5y-MS-v57" secondAttribute="leading" id="oyF-v7-JiW"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="arrow.left.arrow.right" catalog="system" id="89E-M0-Ypk"/>

@@ -5,29 +5,21 @@
 
 import Foundation
 
-// MARK: - Recipe
-struct FakeData: Codable {
-    let albumID, id: Int
-    let title: String
-    let url, thumbnailURL: String
-
-    enum CodingKeys: String, CodingKey {
-        case albumID = "albumId"
-        case id, title, url
-        case thumbnailURL = "thumbnailUrl"
-    }
+protocol BaseModel {
+    var id: Int? { get set }
+    var title: String? { get set }
+    var image: String? { get set }
 }
-
 
 // MARK: - MainModel -
 struct RecipeNew: Codable {
     let results: [Result]?
 }
 
-struct Result: Codable {
-    let id: Int?
-    let title: String?
-    let image: String?
+struct Result: Codable, BaseModel {
+    var id: Int?
+    var title: String?
+    var image: String?
 }
 
 
@@ -38,11 +30,17 @@ struct SearchRecipes: Codable {
 }
 
 // MARK: - Recipe
-struct Recipe: Codable {
-    let id: Int?
-    let title: String?
-    let image: String?
+struct Recipe: Codable, BaseModel {
+    var id: Int?
+    var title: String?
+    var image: String?
 
 }
 
+// MARK: - RandomModel -
 
+struct Random: BaseModel {
+    var id: Int?
+    var title: String?
+    var image: String?
+}

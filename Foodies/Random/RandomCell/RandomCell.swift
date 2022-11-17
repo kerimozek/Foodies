@@ -30,7 +30,7 @@ class RandomCell: UITableViewCell {
         randomView.layer.masksToBounds = false
     }
 
-    func configureCell(item: Recipe) {
+    func configureCell(item: BaseModel) {
         let image = "https://i.dlpng.com/static/png/7210818_preview.png"
         self.randomTitle.text = item.title
         self.randomImageView.kf.setImage(with: URL(string: item.image ?? image))

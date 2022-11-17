@@ -13,7 +13,7 @@ class RandomVC: UIViewController {
     @IBOutlet weak var randomTableView: UITableView!
     @IBOutlet weak var buttonStyle: UIButton!
     let randomTableViewCell = "randomTableViewCell"
-    var medetcan: [Recipe] = []
+    var medetcan: [BaseModel] = []
     var count = 0 {
         didSet {
             if count == 3 {
@@ -21,6 +21,7 @@ class RandomVC: UIViewController {
             }
         }
     }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,8 +35,8 @@ class RandomVC: UIViewController {
         randomTableView.register(.init(nibName: "RandomCell", bundle: nil), forCellReuseIdentifier: randomTableViewCell)
         RandomNetworkManager.shared.delegate = self
         RandomNetworkManager.shared.getBreakfast()
-//        RandomNetworkManager.shared.getDinner()
-//        RandomNetworkManager.shared.getSweets()
+        RandomNetworkManager.shared.getDinner()
+        RandomNetworkManager.shared.getSweets()
     }
 
     @IBAction func shuffleButtonTapped(_ sender: Any) {
@@ -47,6 +48,7 @@ class RandomVC: UIViewController {
         let itemDinner = RandomNetworkManager.shared.dinner.shuffled().first
         let itemSweet = RandomNetworkManager.shared.sweets.shuffled().first
         let itemDrink = RandomNetworkManager.shared.breakfast.shuffled().first
+     //   medetcan.append(.init(id: itemDinner?.id, title: itemDinner?.title, image: itemDinner?.image))
         medetcan.append(itemDinner!)
         medetcan.append(itemSweet!)
         medetcan.append(itemDrink!)
@@ -84,23 +86,19 @@ extension RandomVC: UITableViewDelegate, UITableViewDataSource {
 }
 
 extension RandomVC: RandomNetworkManagerDelegate {
-    
-//    func getDinnerData(isDone: Bool) {
-//        if isDone {
-//            count += 1
-//        }
-//    }
-//
-//    func getSweetsData(isDone: Bool) {
-//        if isDone {
-//            count += 1
-//        }
-//    }
-//
-    func getBreakfastData(isDone: Bool) {
+    func getDinnerData(isDone: Bool) {
         if isDone {
-            count += 3
+            count += 1
         }
     }
-
+    func getSweetsData(isDone: Bool) {
+        if isDone {
+            count += 1
+        }
+    }
+    func getBreakfastData(isDone: Bool) {
+        if isDone {
+            count += 1
+        }
+    }
 }
