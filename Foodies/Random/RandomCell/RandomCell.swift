@@ -20,6 +20,7 @@ class RandomCell: UITableViewCell {
         
         randomView.layer.cornerRadius = 10
         randomView.layer.masksToBounds = true
+        randomView.backgroundColor = UIColor(red: 0.60, green: 0.66, blue: 0.97, alpha: 1.00)
         
         randomView.layer.cornerRadius = 15.0
         randomView.layer.borderWidth = 0.0

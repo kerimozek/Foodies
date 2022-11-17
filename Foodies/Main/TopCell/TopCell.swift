@@ -18,7 +18,7 @@ class TopCell: UICollectionViewCell {
         super.awakeFromNib()
         topCellView.layer.cornerRadius = 8
         topCellView.layer.masksToBounds = false
-        topCellView.backgroundColor = UIColor(red: 0.11, green: 0.13, blue: 0.15, alpha: 0.7)
+        topCellView.backgroundColor = UIColor(red: 0.60, green: 0.66, blue: 0.97, alpha: 1.00)
         topCellImageView.layer.cornerRadius = 8
         nameLabel.backgroundColor = UIColor(red: 0.11, green: 0.13, blue: 0.15, alpha: 0.2)
         nameLabel.layer.masksToBounds = true

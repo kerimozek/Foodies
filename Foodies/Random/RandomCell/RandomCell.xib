@@ -18,29 +18,30 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zjX-zE-yPq">
-                        <rect key="frame" x="16" y="8" width="340" height="246"/>
+                        <rect key="frame" x="16" y="16" width="340" height="230"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sib-mv-kvw">
-                        <rect key="frame" x="16" y="8" width="340" height="214"/>
+                        <rect key="frame" x="16" y="16" width="340" height="172.5"/>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YKR-d7-q17">
-                        <rect key="frame" x="16" y="230" width="340" height="24"/>
-                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                        <nil key="textColor"/>
+                        <rect key="frame" x="16" y="196.5" width="340" height="49.5"/>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                        <color key="textColor" red="0.98039215690000003" green="0.96862745100000003" blue="0.94117647059999998" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="sib-mv-kvw" firstAttribute="height" secondItem="zjX-zE-yPq" secondAttribute="height" multiplier="0.75" id="1We-Ei-WJE"/>
                     <constraint firstAttribute="trailing" secondItem="sib-mv-kvw" secondAttribute="trailing" constant="16" id="3ZT-mO-HsK"/>
                     <constraint firstItem="sib-mv-kvw" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="4tb-mL-2hM"/>
                     <constraint firstAttribute="trailing" secondItem="YKR-d7-q17" secondAttribute="trailing" constant="16" id="8Ie-ca-K9H"/>
                     <constraint firstItem="YKR-d7-q17" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="FS0-M8-k7l"/>
-                    <constraint firstItem="sib-mv-kvw" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="KMz-Kl-lhe"/>
-                    <constraint firstAttribute="bottom" secondItem="zjX-zE-yPq" secondAttribute="bottom" constant="8" id="Lpe-tF-o87"/>
+                    <constraint firstItem="sib-mv-kvw" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="KMz-Kl-lhe"/>
+                    <constraint firstAttribute="bottom" secondItem="zjX-zE-yPq" secondAttribute="bottom" constant="16" id="Lpe-tF-o87"/>
                     <constraint firstItem="YKR-d7-q17" firstAttribute="top" secondItem="sib-mv-kvw" secondAttribute="bottom" constant="8" id="Roq-rg-PDN"/>
                     <constraint firstItem="zjX-zE-yPq" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="YAI-bk-GDj"/>
-                    <constraint firstItem="zjX-zE-yPq" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="eLn-d7-Fo5"/>
+                    <constraint firstItem="zjX-zE-yPq" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="eLn-d7-Fo5"/>
                     <constraint firstAttribute="trailing" secondItem="zjX-zE-yPq" secondAttribute="trailing" constant="16" id="pO7-vC-snS"/>
                     <constraint firstItem="zjX-zE-yPq" firstAttribute="bottom" secondItem="YKR-d7-q17" secondAttribute="bottom" id="qUy-Rs-xfv"/>
                 </constraints>

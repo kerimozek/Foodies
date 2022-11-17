@@ -22,15 +22,16 @@ class SearchCell: UITableViewCell {
         searchImageView.layer.cornerRadius = 10
         searchView.layer.cornerRadius = 10
         searchView.layer.masksToBounds = true
+        searchView.backgroundColor = UIColor(red: 0.60, green: 0.66, blue: 0.97, alpha: 1.00)
 
+        self.layer.cornerRadius = 10.0
+        self.layer.borderWidth = 0.0
+        self.layer.shadowColor = UIColor.lightGray.withAlphaComponent(0.7).cgColor
+        self.layer.shadowOffset = CGSize(width: 0, height: 0)
+        self.layer.shadowRadius = 5.0
+        self.layer.shadowOpacity = 1
+        self.layer.masksToBounds = false
         
-        searchView.layer.cornerRadius = 15.0
-        searchView.layer.borderWidth = 0.0
-        searchView.layer.shadowColor = UIColor.black.withAlphaComponent(0.2).cgColor
-        searchView.layer.shadowOffset = CGSize(width: 0, height: 0)
-        searchView.layer.shadowRadius = 5.0
-        searchView.layer.shadowOpacity = 1
-        searchView.layer.masksToBounds = false
     
     }
 
