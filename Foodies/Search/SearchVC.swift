@@ -56,6 +56,9 @@ extension SearchVC: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vc = storyboard?.instantiateViewController(withIdentifier: "DetailsVC") as! DetailsVC
+        vc.detail = SearchNetworkManager.shared.dinner[indexPath.row]
+        navigationController?.pushViewController(vc, animated: true)
         print("clicked")
     }
 }

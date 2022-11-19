@@ -69,6 +69,16 @@ extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollec
         
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let vc = storyboard?.instantiateViewController(withIdentifier: "DetailsVC") as! DetailsVC
+        if collectionView == self.topCollectionView {
+            vc.detail = MainNetworkManager.shared.breakfast[indexPath.item]
+        } else {
+            vc.detail = MainNetworkManager.shared.sweets[indexPath.item]
+        }
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         if collectionView == self.topCollectionView {
             return CGSize(width: collectionView.frame.width / 1.5 , height: collectionView.frame.height)
