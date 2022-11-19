@@ -22,7 +22,6 @@ struct Result: Codable, BaseModel {
     var image: String?
 }
 
-
 // MARK: - SearchModel -
 
 struct SearchRecipes: Codable {
