@@ -24,7 +24,7 @@ class DetailsVC: UIViewController {
         detailTitle.text = detail?.title
         let image = "https://i.dlpng.com/static/png/7210818_preview.png"
         self.detailImage.kf.setImage(with: URL(string: detail?.image ?? image))
-        categoryLabel.text = "\(String(describing: detail?.id))"
+        categoryLabel.text = "\(String(describing: detail?.id)))"
     }
 
 }
