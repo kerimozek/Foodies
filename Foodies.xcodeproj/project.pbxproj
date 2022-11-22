@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6E0E45DF2923E40600D1C213 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 6E0E45DE2923E40600D1C213 /* Kingfisher */; };
 		6E615E35292159B300FD4C48 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E615E34292159B300FD4C48 /* AppDelegate.swift */; };
 		6E615E37292159B300FD4C48 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E615E36292159B300FD4C48 /* SceneDelegate.swift */; };
 		6E615E39292159B300FD4C48 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E615E38292159B300FD4C48 /* HomeVC.swift */; };
@@ -36,14 +35,17 @@
 		6EA00FA4292CC977001AA212 /* firstIntroGif.gif in Resources */ = {isa = PBXBuildFile; fileRef = 6EA00FA3292CC977001AA212 /* firstIntroGif.gif */; };
 		6EA00FA6292CCA6E001AA212 /* secondIntroGif.gif in Resources */ = {isa = PBXBuildFile; fileRef = 6EA00FA5292CCA6E001AA212 /* secondIntroGif.gif */; };
 		6EA00FA8292D43EB001AA212 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6EA00FA7292D43EB001AA212 /* GoogleService-Info.plist */; };
+		6EA00FA9292D4DCB001AA212 /* Foodies.app in Resources */ = {isa = PBXBuildFile; fileRef = 6E615E31292159B300FD4C48 /* Foodies.app */; platformFilter = ios; };
 		6EB5B2782922BD5000C2ACFF /* MainNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB5B2772922BD5000C2ACFF /* MainNetworkManager.swift */; };
 		6ED640A12927C09D00E70385 /* DetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED640A02927C09D00E70385 /* DetailsVC.swift */; };
 		6EEDBFAB2922C88300D7F07A /* FavoritesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EEDBFAA2922C88300D7F07A /* FavoritesVC.swift */; };
 		6EEDBFAE2922C90C00D7F07A /* FavoritesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EEDBFAC2922C90C00D7F07A /* FavoritesCell.swift */; };
 		6EEDBFAF2922C90C00D7F07A /* FavoritesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6EEDBFAD2922C90C00D7F07A /* FavoritesCell.xib */; };
+		98D4D1D5DBF52EF322D54192 /* Pods_Foodies.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CFF04893ACAFCD8A0436F79 /* Pods_Foodies.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6275EA97D4F14BA476CCECEE /* Pods-Foodies.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Foodies.release.xcconfig"; path = "Target Support Files/Pods-Foodies/Pods-Foodies.release.xcconfig"; sourceTree = "<group>"; };
 		6E615E31292159B300FD4C48 /* Foodies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Foodies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E615E34292159B300FD4C48 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6E615E36292159B300FD4C48 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -78,6 +80,8 @@
 		6EEDBFAA2922C88300D7F07A /* FavoritesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesVC.swift; sourceTree = "<group>"; };
 		6EEDBFAC2922C90C00D7F07A /* FavoritesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesCell.swift; sourceTree = "<group>"; };
 		6EEDBFAD2922C90C00D7F07A /* FavoritesCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoritesCell.xib; sourceTree = "<group>"; };
+		7CFF04893ACAFCD8A0436F79 /* Pods_Foodies.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Foodies.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4E515F2A5037E10E7507397 /* Pods-Foodies.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Foodies.debug.xcconfig"; path = "Target Support Files/Pods-Foodies/Pods-Foodies.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,8 +89,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6E0E45DF2923E40600D1C213 /* Kingfisher in Frameworks */,
 				6E6279FF2922508600925327 /* SideTown in Frameworks */,
+				98D4D1D5DBF52EF322D54192 /* Pods_Foodies.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,6 +103,8 @@
 				6EA00FA7292D43EB001AA212 /* GoogleService-Info.plist */,
 				6E615E33292159B300FD4C48 /* Foodies */,
 				6E615E32292159B300FD4C48 /* Products */,
+				B803F8212FDC8165EB1EF62D /* Pods */,
+				EE2E0D50F60EEB4AEB05C640 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -269,6 +275,23 @@
 			path = FavoritesCell;
 			sourceTree = "<group>";
 		};
+		B803F8212FDC8165EB1EF62D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F4E515F2A5037E10E7507397 /* Pods-Foodies.debug.xcconfig */,
+				6275EA97D4F14BA476CCECEE /* Pods-Foodies.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		EE2E0D50F60EEB4AEB05C640 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7CFF04893ACAFCD8A0436F79 /* Pods_Foodies.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -276,6 +299,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6E615E45292159B600FD4C48 /* Build configuration list for PBXNativeTarget "Foodies" */;
 			buildPhases = (
+				0D667D407DFDED29E8714684 /* [CP] Check Pods Manifest.lock */,
 				6E615E2D292159B300FD4C48 /* Sources */,
 				6E615E2E292159B300FD4C48 /* Frameworks */,
 				6E615E2F292159B300FD4C48 /* Resources */,
@@ -287,7 +311,6 @@
 			name = Foodies;
 			packageProductDependencies = (
 				6E6279FE2922508600925327 /* SideTown */,
-				6E0E45DE2923E40600D1C213 /* Kingfisher */,
 			);
 			productName = Foodies;
 			productReference = 6E615E31292159B300FD4C48 /* Foodies.app */;
@@ -319,7 +342,6 @@
 			mainGroup = 6E615E28292159B300FD4C48;
 			packageReferences = (
 				6E6279FD2922508600925327 /* XCRemoteSwiftPackageReference "SideTown" */,
-				6E0E45DD2923E40500D1C213 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = 6E615E32292159B300FD4C48 /* Products */;
 			projectDirPath = "";
@@ -338,6 +360,7 @@
 				6E6A37512924173B00E1EFCC /* RandomCell.xib in Resources */,
 				6E615E41292159B600FD4C48 /* LaunchScreen.storyboard in Resources */,
 				6EA00FA6292CCA6E001AA212 /* secondIntroGif.gif in Resources */,
+				6EA00FA9292D4DCB001AA212 /* Foodies.app in Resources */,
 				6E615E3E292159B600FD4C48 /* Assets.xcassets in Resources */,
 				6E615E5429216C5F00FD4C48 /* BottomCell.xib in Resources */,
 				6E627A0F2922702D00925327 /* SearchCell.xib in Resources */,
@@ -350,6 +373,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0D667D407DFDED29E8714684 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Foodies-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		6E615E2D292159B300FD4C48 /* Sources */ = {
@@ -518,6 +566,7 @@
 		};
 		6E615E46292159B600FD4C48 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F4E515F2A5037E10E7507397 /* Pods-Foodies.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -547,6 +596,7 @@
 		};
 		6E615E47292159B600FD4C48 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6275EA97D4F14BA476CCECEE /* Pods-Foodies.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -598,14 +648,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		6E0E45DD2923E40500D1C213 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
-			requirement = {
-				branch = master;
-				kind = branch;
-			};
-		};
 		6E6279FD2922508600925327 /* XCRemoteSwiftPackageReference "SideTown" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/sametkoyuncu/SideTown.git";
@@ -617,11 +659,6 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		6E0E45DE2923E40600D1C213 /* Kingfisher */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 6E0E45DD2923E40500D1C213 /* XCRemoteSwiftPackageReference "Kingfisher" */;
-			productName = Kingfisher;
-		};
 		6E6279FE2922508600925327 /* SideTown */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 6E6279FD2922508600925327 /* XCRemoteSwiftPackageReference "SideTown" */;
