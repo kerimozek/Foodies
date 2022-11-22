@@ -11,7 +11,7 @@ class SingInVC: UIViewController {
 
     @IBOutlet weak var emailTxt: UITextField!
     @IBOutlet weak var passwordTxt: UITextField!
-    @IBOutlet weak var signInButton: UIButton!
+    @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var signUpButton: UIButton!
     
  
@@ -22,12 +22,12 @@ class SingInVC: UIViewController {
     }
     
     private func setupUI() {
-        signInButton.layer.cornerRadius = 8
+        loginButton.layer.cornerRadius = 8
         signUpButton.layer.cornerRadius = 8
     }
 
 
-    @IBAction func signInButtonTapped(_ sender: Any) {
+    @IBAction func loginButtonTapped(_ sender: Any) {
         
     }
     

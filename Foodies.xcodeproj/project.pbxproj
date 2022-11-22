@@ -35,6 +35,7 @@
 		6EA00F9C292CC36F001AA212 /* IntroSecondVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA00F9B292CC36F001AA212 /* IntroSecondVC.swift */; };
 		6EA00FA4292CC977001AA212 /* firstIntroGif.gif in Resources */ = {isa = PBXBuildFile; fileRef = 6EA00FA3292CC977001AA212 /* firstIntroGif.gif */; };
 		6EA00FA6292CCA6E001AA212 /* secondIntroGif.gif in Resources */ = {isa = PBXBuildFile; fileRef = 6EA00FA5292CCA6E001AA212 /* secondIntroGif.gif */; };
+		6EA00FA8292D43EB001AA212 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6EA00FA7292D43EB001AA212 /* GoogleService-Info.plist */; };
 		6EB5B2782922BD5000C2ACFF /* MainNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB5B2772922BD5000C2ACFF /* MainNetworkManager.swift */; };
 		6ED640A12927C09D00E70385 /* DetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED640A02927C09D00E70385 /* DetailsVC.swift */; };
 		6EEDBFAB2922C88300D7F07A /* FavoritesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EEDBFAA2922C88300D7F07A /* FavoritesVC.swift */; };
@@ -71,6 +72,7 @@
 		6EA00F9B292CC36F001AA212 /* IntroSecondVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroSecondVC.swift; sourceTree = "<group>"; };
 		6EA00FA3292CC977001AA212 /* firstIntroGif.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = firstIntroGif.gif; sourceTree = "<group>"; };
 		6EA00FA5292CCA6E001AA212 /* secondIntroGif.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = secondIntroGif.gif; sourceTree = "<group>"; };
+		6EA00FA7292D43EB001AA212 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6EB5B2772922BD5000C2ACFF /* MainNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNetworkManager.swift; sourceTree = "<group>"; };
 		6ED640A02927C09D00E70385 /* DetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsVC.swift; sourceTree = "<group>"; };
 		6EEDBFAA2922C88300D7F07A /* FavoritesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesVC.swift; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 		6E615E28292159B300FD4C48 = {
 			isa = PBXGroup;
 			children = (
+				6EA00FA7292D43EB001AA212 /* GoogleService-Info.plist */,
 				6E615E33292159B300FD4C48 /* Foodies */,
 				6E615E32292159B300FD4C48 /* Products */,
 			);
@@ -340,6 +343,7 @@
 				6E627A0F2922702D00925327 /* SearchCell.xib in Resources */,
 				6EEDBFAF2922C90C00D7F07A /* FavoritesCell.xib in Resources */,
 				6E615E3C292159B300FD4C48 /* Main.storyboard in Resources */,
+				6EA00FA8292D43EB001AA212 /* GoogleService-Info.plist in Resources */,
 				6E615E5029216C5300FD4C48 /* TopCell.xib in Resources */,
 				6EA00FA4292CC977001AA212 /* firstIntroGif.gif in Resources */,
 			);
