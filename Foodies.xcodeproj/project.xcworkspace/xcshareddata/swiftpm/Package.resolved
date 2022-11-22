@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "sidetown",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/sametkoyuncu/SideTown.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "aa5279db824a525dee80c624d0cc5cafda345f92"
+      }
+    }
+  ],
+  "version" : 2
+}
