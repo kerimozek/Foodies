@@ -35,18 +35,15 @@
 		6EA00FA4292CC977001AA212 /* firstIntroGif.gif in Resources */ = {isa = PBXBuildFile; fileRef = 6EA00FA3292CC977001AA212 /* firstIntroGif.gif */; };
 		6EA00FA6292CCA6E001AA212 /* secondIntroGif.gif in Resources */ = {isa = PBXBuildFile; fileRef = 6EA00FA5292CCA6E001AA212 /* secondIntroGif.gif */; };
 		6EA00FA8292D43EB001AA212 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6EA00FA7292D43EB001AA212 /* GoogleService-Info.plist */; };
-		6EA00FA9292D4DCB001AA212 /* Foodies.app in Resources */ = {isa = PBXBuildFile; fileRef = 6E615E31292159B300FD4C48 /* Foodies.app */; platformFilter = ios; };
 		6EB5B2782922BD5000C2ACFF /* MainNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB5B2772922BD5000C2ACFF /* MainNetworkManager.swift */; };
 		6ED640A12927C09D00E70385 /* DetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED640A02927C09D00E70385 /* DetailsVC.swift */; };
 		6EEDBFAB2922C88300D7F07A /* FavoritesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EEDBFAA2922C88300D7F07A /* FavoritesVC.swift */; };
 		6EEDBFAE2922C90C00D7F07A /* FavoritesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EEDBFAC2922C90C00D7F07A /* FavoritesCell.swift */; };
 		6EEDBFAF2922C90C00D7F07A /* FavoritesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6EEDBFAD2922C90C00D7F07A /* FavoritesCell.xib */; };
-		98D4D1D5DBF52EF322D54192 /* Pods_Foodies.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CFF04893ACAFCD8A0436F79 /* Pods_Foodies.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		6275EA97D4F14BA476CCECEE /* Pods-Foodies.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Foodies.release.xcconfig"; path = "Target Support Files/Pods-Foodies/Pods-Foodies.release.xcconfig"; sourceTree = "<group>"; };
-		6E615E31292159B300FD4C48 /* Foodies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Foodies.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6E615E31292159B300FD4C48 /* Foodies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = Foodies.app; path = "/Users/mehmetkerimozek/Documents/GitHub/Foodies/build/Debug-iphoneos/Foodies.app"; sourceTree = "<absolute>"; };
 		6E615E34292159B300FD4C48 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6E615E36292159B300FD4C48 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		6E615E38292159B300FD4C48 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
@@ -80,8 +77,6 @@
 		6EEDBFAA2922C88300D7F07A /* FavoritesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesVC.swift; sourceTree = "<group>"; };
 		6EEDBFAC2922C90C00D7F07A /* FavoritesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesCell.swift; sourceTree = "<group>"; };
 		6EEDBFAD2922C90C00D7F07A /* FavoritesCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoritesCell.xib; sourceTree = "<group>"; };
-		7CFF04893ACAFCD8A0436F79 /* Pods_Foodies.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Foodies.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F4E515F2A5037E10E7507397 /* Pods-Foodies.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Foodies.debug.xcconfig"; path = "Target Support Files/Pods-Foodies/Pods-Foodies.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,7 +85,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				6E6279FF2922508600925327 /* SideTown in Frameworks */,
-				98D4D1D5DBF52EF322D54192 /* Pods_Foodies.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,18 +96,7 @@
 			children = (
 				6EA00FA7292D43EB001AA212 /* GoogleService-Info.plist */,
 				6E615E33292159B300FD4C48 /* Foodies */,
-				6E615E32292159B300FD4C48 /* Products */,
-				B803F8212FDC8165EB1EF62D /* Pods */,
-				EE2E0D50F60EEB4AEB05C640 /* Frameworks */,
 			);
-			sourceTree = "<group>";
-		};
-		6E615E32292159B300FD4C48 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				6E615E31292159B300FD4C48 /* Foodies.app */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		6E615E33292159B300FD4C48 /* Foodies */ = {
@@ -132,7 +115,7 @@
 				6E615E3D292159B600FD4C48 /* Assets.xcassets */,
 				6E627A0729226ED500925327 /* Support */,
 			);
-			path = Foodies;
+			name = Foodies;
 			sourceTree = "<group>";
 		};
 		6E615E4A29216BF900FD4C48 /* Main */ = {
@@ -275,23 +258,6 @@
 			path = FavoritesCell;
 			sourceTree = "<group>";
 		};
-		B803F8212FDC8165EB1EF62D /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				F4E515F2A5037E10E7507397 /* Pods-Foodies.debug.xcconfig */,
-				6275EA97D4F14BA476CCECEE /* Pods-Foodies.release.xcconfig */,
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
-		EE2E0D50F60EEB4AEB05C640 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				7CFF04893ACAFCD8A0436F79 /* Pods_Foodies.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -343,7 +309,7 @@
 			packageReferences = (
 				6E6279FD2922508600925327 /* XCRemoteSwiftPackageReference "SideTown" */,
 			);
-			productRefGroup = 6E615E32292159B300FD4C48 /* Products */;
+			productRefGroup = 6E615E28292159B300FD4C48;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -360,7 +326,6 @@
 				6E6A37512924173B00E1EFCC /* RandomCell.xib in Resources */,
 				6E615E41292159B600FD4C48 /* LaunchScreen.storyboard in Resources */,
 				6EA00FA6292CCA6E001AA212 /* secondIntroGif.gif in Resources */,
-				6EA00FA9292D4DCB001AA212 /* Foodies.app in Resources */,
 				6E615E3E292159B600FD4C48 /* Assets.xcassets in Resources */,
 				6E615E5429216C5F00FD4C48 /* BottomCell.xib in Resources */,
 				6E627A0F2922702D00925327 /* SearchCell.xib in Resources */,
@@ -566,7 +531,6 @@
 		};
 		6E615E46292159B600FD4C48 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F4E515F2A5037E10E7507397 /* Pods-Foodies.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -596,7 +560,6 @@
 		};
 		6E615E47292159B600FD4C48 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6275EA97D4F14BA476CCECEE /* Pods-Foodies.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
