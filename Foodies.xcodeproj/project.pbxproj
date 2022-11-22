@@ -18,7 +18,6 @@
 		6E615E5029216C5300FD4C48 /* TopCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E615E4E29216C5300FD4C48 /* TopCell.xib */; };
 		6E615E5329216C5F00FD4C48 /* BottomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E615E5129216C5F00FD4C48 /* BottomCell.swift */; };
 		6E615E5429216C5F00FD4C48 /* BottomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E615E5229216C5F00FD4C48 /* BottomCell.xib */; };
-		6E6279FF2922508600925327 /* SideTown in Frameworks */ = {isa = PBXBuildFile; productRef = 6E6279FE2922508600925327 /* SideTown */; };
 		6E627A0A29226F1300925327 /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E627A0929226F1300925327 /* SearchVC.swift */; };
 		6E627A0E2922702D00925327 /* SearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E627A0C2922702D00925327 /* SearchCell.swift */; };
 		6E627A0F2922702D00925327 /* SearchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E627A0D2922702D00925327 /* SearchCell.xib */; };
@@ -37,6 +36,7 @@
 		6EA00FA8292D43EB001AA212 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6EA00FA7292D43EB001AA212 /* GoogleService-Info.plist */; };
 		6EB5B2782922BD5000C2ACFF /* MainNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB5B2772922BD5000C2ACFF /* MainNetworkManager.swift */; };
 		6ED640A12927C09D00E70385 /* DetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED640A02927C09D00E70385 /* DetailsVC.swift */; };
+		6EE42738292D7FFC0049A9A7 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 6EE42737292D7FFC0049A9A7 /* FirebaseAuth */; };
 		6EE97859292D579400D255AB /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 6EE97858292D579400D255AB /* Kingfisher */; };
 		6EEDBFAB2922C88300D7F07A /* FavoritesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EEDBFAA2922C88300D7F07A /* FavoritesVC.swift */; };
 		6EEDBFAE2922C90C00D7F07A /* FavoritesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EEDBFAC2922C90C00D7F07A /* FavoritesCell.swift */; };
@@ -86,7 +86,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6EE97859292D579400D255AB /* Kingfisher in Frameworks */,
-				6E6279FF2922508600925327 /* SideTown in Frameworks */,
+				6EE42738292D7FFC0049A9A7 /* FirebaseAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,8 +287,8 @@
 			);
 			name = Foodies;
 			packageProductDependencies = (
-				6E6279FE2922508600925327 /* SideTown */,
 				6EE97858292D579400D255AB /* Kingfisher */,
+				6EE42737292D7FFC0049A9A7 /* FirebaseAuth */,
 			);
 			productName = Foodies;
 			productReference = 6EB66872292D5C24007656D9 /* Foodies.app */;
@@ -319,8 +319,8 @@
 			);
 			mainGroup = 6E615E28292159B300FD4C48;
 			packageReferences = (
-				6E6279FD2922508600925327 /* XCRemoteSwiftPackageReference "SideTown" */,
 				6EE97857292D579400D255AB /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				6EE42736292D7FFC0049A9A7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = 6E615E28292159B300FD4C48;
 			projectDirPath = "";
@@ -601,11 +601,11 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		6E6279FD2922508600925327 /* XCRemoteSwiftPackageReference "SideTown" */ = {
+		6EE42736292D7FFC0049A9A7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/sametkoyuncu/SideTown.git";
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
 			requirement = {
-				branch = main;
+				branch = master;
 				kind = branch;
 			};
 		};
@@ -620,10 +620,10 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		6E6279FE2922508600925327 /* SideTown */ = {
+		6EE42737292D7FFC0049A9A7 /* FirebaseAuth */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 6E6279FD2922508600925327 /* XCRemoteSwiftPackageReference "SideTown" */;
-			productName = SideTown;
+			package = 6EE42736292D7FFC0049A9A7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
 		};
 		6EE97858292D579400D255AB /* Kingfisher */ = {
 			isa = XCSwiftPackageProductDependency;
