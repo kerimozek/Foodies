@@ -37,20 +37,20 @@
 		6EA00FA8292D43EB001AA212 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6EA00FA7292D43EB001AA212 /* GoogleService-Info.plist */; };
 		6EB5B2782922BD5000C2ACFF /* MainNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB5B2772922BD5000C2ACFF /* MainNetworkManager.swift */; };
 		6ED640A12927C09D00E70385 /* DetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED640A02927C09D00E70385 /* DetailsVC.swift */; };
+		6EE97859292D579400D255AB /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 6EE97858292D579400D255AB /* Kingfisher */; };
 		6EEDBFAB2922C88300D7F07A /* FavoritesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EEDBFAA2922C88300D7F07A /* FavoritesVC.swift */; };
 		6EEDBFAE2922C90C00D7F07A /* FavoritesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EEDBFAC2922C90C00D7F07A /* FavoritesCell.swift */; };
 		6EEDBFAF2922C90C00D7F07A /* FavoritesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6EEDBFAD2922C90C00D7F07A /* FavoritesCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		6E615E31292159B300FD4C48 /* Foodies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = Foodies.app; path = "/Users/mehmetkerimozek/Documents/GitHub/Foodies/build/Debug-iphoneos/Foodies.app"; sourceTree = "<absolute>"; };
-		6E615E34292159B300FD4C48 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		6E615E36292159B300FD4C48 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		6E615E34292159B300FD4C48 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = Foodies/AppDelegate.swift; sourceTree = "<group>"; };
+		6E615E36292159B300FD4C48 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SceneDelegate.swift; path = Foodies/SceneDelegate.swift; sourceTree = "<group>"; };
 		6E615E38292159B300FD4C48 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		6E615E3B292159B300FD4C48 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		6E615E3D292159B600FD4C48 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6E615E3D292159B600FD4C48 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Foodies/Assets.xcassets; sourceTree = "<group>"; };
 		6E615E40292159B600FD4C48 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		6E615E42292159B600FD4C48 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6E615E42292159B600FD4C48 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = Foodies/Info.plist; sourceTree = SOURCE_ROOT; };
 		6E615E4829216B0E00FD4C48 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		6E615E4D29216C5300FD4C48 /* TopCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopCell.swift; sourceTree = "<group>"; };
 		6E615E4E29216C5300FD4C48 /* TopCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TopCell.xib; sourceTree = "<group>"; };
@@ -69,10 +69,11 @@
 		6EA00F96292CC320001AA212 /* gifLoader+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "gifLoader+Ext.swift"; sourceTree = "<group>"; };
 		6EA00F99292CC35E001AA212 /* IntroFirstVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroFirstVC.swift; sourceTree = "<group>"; };
 		6EA00F9B292CC36F001AA212 /* IntroSecondVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroSecondVC.swift; sourceTree = "<group>"; };
-		6EA00FA3292CC977001AA212 /* firstIntroGif.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = firstIntroGif.gif; sourceTree = "<group>"; };
-		6EA00FA5292CCA6E001AA212 /* secondIntroGif.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = secondIntroGif.gif; sourceTree = "<group>"; };
-		6EA00FA7292D43EB001AA212 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		6EA00FA3292CC977001AA212 /* firstIntroGif.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = firstIntroGif.gif; path = Foodies/firstIntroGif.gif; sourceTree = "<group>"; };
+		6EA00FA5292CCA6E001AA212 /* secondIntroGif.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = secondIntroGif.gif; path = Foodies/secondIntroGif.gif; sourceTree = "<group>"; };
+		6EA00FA7292D43EB001AA212 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "Foodies/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6EB5B2772922BD5000C2ACFF /* MainNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNetworkManager.swift; sourceTree = "<group>"; };
+		6EB66872292D5C24007656D9 /* Foodies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Foodies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6ED640A02927C09D00E70385 /* DetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsVC.swift; sourceTree = "<group>"; };
 		6EEDBFAA2922C88300D7F07A /* FavoritesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesVC.swift; sourceTree = "<group>"; };
 		6EEDBFAC2922C90C00D7F07A /* FavoritesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesCell.swift; sourceTree = "<group>"; };
@@ -84,6 +85,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6EE97859292D579400D255AB /* Kingfisher in Frameworks */,
 				6E6279FF2922508600925327 /* SideTown in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -96,6 +98,7 @@
 			children = (
 				6EA00FA7292D43EB001AA212 /* GoogleService-Info.plist */,
 				6E615E33292159B300FD4C48 /* Foodies */,
+				6EB66872292D5C24007656D9 /* Foodies.app */,
 			);
 			sourceTree = "<group>";
 		};
@@ -126,7 +129,8 @@
 				6E615E4B29216C1C00FD4C48 /* TopCell */,
 				6E615E4C29216C2700FD4C48 /* BottomCell */,
 			);
-			path = Main;
+			name = Main;
+			path = Foodies/Main;
 			sourceTree = "<group>";
 		};
 		6E615E4B29216C1C00FD4C48 /* TopCell */ = {
@@ -167,7 +171,8 @@
 				6E6A374829240E4600E1EFCC /* SearchNetworkManager.swift */,
 				6E627A0B2922700A00925327 /* SearchCell */,
 			);
-			path = Search;
+			name = Search;
+			path = Foodies/Search;
 			sourceTree = "<group>";
 		};
 		6E627A0B2922700A00925327 /* SearchCell */ = {
@@ -186,7 +191,8 @@
 				6E6A37522924177A00E1EFCC /* RandomNetworkManager.swift */,
 				6E6A374D2924172800E1EFCC /* RandomCell */,
 			);
-			path = Random;
+			name = Random;
+			path = Foodies/Random;
 			sourceTree = "<group>";
 		};
 		6E6A374D2924172800E1EFCC /* RandomCell */ = {
@@ -204,7 +210,8 @@
 				6EA00F8E292C0EEC001AA212 /* SingInVC.swift */,
 				6EA00F92292C0F24001AA212 /* SignUpVC.swift */,
 			);
-			path = UserCreation;
+			name = UserCreation;
+			path = Foodies/UserCreation;
 			sourceTree = "<group>";
 		};
 		6EA00F94292CC305001AA212 /* Extensions */ = {
@@ -212,7 +219,8 @@
 			children = (
 				6EA00F96292CC320001AA212 /* gifLoader+Ext.swift */,
 			);
-			path = Extensions;
+			name = Extensions;
+			path = Foodies/Extensions;
 			sourceTree = "<group>";
 		};
 		6EA00F95292CC30D001AA212 /* Model */ = {
@@ -220,7 +228,8 @@
 			children = (
 				6E615E4829216B0E00FD4C48 /* Model.swift */,
 			);
-			path = Model;
+			name = Model;
+			path = Foodies/Model;
 			sourceTree = "<group>";
 		};
 		6EA00F98292CC33E001AA212 /* Intro */ = {
@@ -229,7 +238,8 @@
 				6EA00F99292CC35E001AA212 /* IntroFirstVC.swift */,
 				6EA00F9B292CC36F001AA212 /* IntroSecondVC.swift */,
 			);
-			path = Intro;
+			name = Intro;
+			path = Foodies/Intro;
 			sourceTree = "<group>";
 		};
 		6ED6409F2927C08200E70385 /* Detail */ = {
@@ -237,7 +247,8 @@
 			children = (
 				6ED640A02927C09D00E70385 /* DetailsVC.swift */,
 			);
-			path = Detail;
+			name = Detail;
+			path = Foodies/Detail;
 			sourceTree = "<group>";
 		};
 		6EEDBFA92922C86E00D7F07A /* Favorites */ = {
@@ -246,7 +257,8 @@
 				6EEDBFAA2922C88300D7F07A /* FavoritesVC.swift */,
 				6EEDBFB02922CA2100D7F07A /* FavoritesCell */,
 			);
-			path = Favorites;
+			name = Favorites;
+			path = Foodies/Favorites;
 			sourceTree = "<group>";
 		};
 		6EEDBFB02922CA2100D7F07A /* FavoritesCell */ = {
@@ -265,7 +277,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6E615E45292159B600FD4C48 /* Build configuration list for PBXNativeTarget "Foodies" */;
 			buildPhases = (
-				0D667D407DFDED29E8714684 /* [CP] Check Pods Manifest.lock */,
 				6E615E2D292159B300FD4C48 /* Sources */,
 				6E615E2E292159B300FD4C48 /* Frameworks */,
 				6E615E2F292159B300FD4C48 /* Resources */,
@@ -277,9 +288,10 @@
 			name = Foodies;
 			packageProductDependencies = (
 				6E6279FE2922508600925327 /* SideTown */,
+				6EE97858292D579400D255AB /* Kingfisher */,
 			);
 			productName = Foodies;
-			productReference = 6E615E31292159B300FD4C48 /* Foodies.app */;
+			productReference = 6EB66872292D5C24007656D9 /* Foodies.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -308,6 +320,7 @@
 			mainGroup = 6E615E28292159B300FD4C48;
 			packageReferences = (
 				6E6279FD2922508600925327 /* XCRemoteSwiftPackageReference "SideTown" */,
+				6EE97857292D579400D255AB /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = 6E615E28292159B300FD4C48;
 			projectDirPath = "";
@@ -338,31 +351,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		0D667D407DFDED29E8714684 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Foodies-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		6E615E2D292159B300FD4C48 /* Sources */ = {
@@ -402,6 +390,7 @@
 				6E615E3B292159B300FD4C48 /* Base */,
 			);
 			name = Main.storyboard;
+			path = Foodies;
 			sourceTree = "<group>";
 		};
 		6E615E3F292159B600FD4C48 /* LaunchScreen.storyboard */ = {
@@ -410,6 +399,7 @@
 				6E615E40292159B600FD4C48 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = Foodies;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -619,6 +609,14 @@
 				kind = branch;
 			};
 		};
+		6EE97857292D579400D255AB /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -626,6 +624,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 6E6279FD2922508600925327 /* XCRemoteSwiftPackageReference "SideTown" */;
 			productName = SideTown;
+		};
+		6EE97858292D579400D255AB /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6EE97857292D579400D255AB /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
