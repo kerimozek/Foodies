@@ -23,7 +23,7 @@ class DetailsVC: UIViewController {
         
         super.viewDidLoad()
         
-        servingTime.text = "\(String(describing: detail?.servings))"
+        servingTime.text = "Serving Time: \(String(describing: detail?.servings))"
         summaryText.text = detail?.summary
         detailImage.layer.cornerRadius = 10
         detailTitle.text = detail?.title
