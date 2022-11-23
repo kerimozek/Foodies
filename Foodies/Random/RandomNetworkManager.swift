@@ -64,7 +64,7 @@ class RandomNetworkManager {
 
             do {
                 let recipeNew = try JSONDecoder().decode(RecipeNew.self, from: data)
-             //   self.sweets = recipeNew.recipes!
+             // self.sweets = recipeNew.recipes!
                 self.sweets = recipeNew.results!.map { Recipe(id: $0.id, title: $0.title, image: $0.image) }
                 self.delegate?.getSweetsData(isDone: true)
             } catch {

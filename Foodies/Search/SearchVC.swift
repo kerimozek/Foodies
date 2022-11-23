@@ -10,8 +10,6 @@ import Firebase
 
 class SearchVC: UIViewController {
    
-    
-
 
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var searchTableView: UITableView!

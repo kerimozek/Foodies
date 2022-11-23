@@ -38,7 +38,8 @@ class BottomCell: UICollectionViewCell {
         let image = "https://i.dlpng.com/static/png/7210818_preview.png"
         self.titleLabel.text = item.title
         self.bottomImageView.kf.setImage(with: URL(string: item.image ?? image))
-        self.pointLabel.text = String(item.id!)
+        self.pointLabel.text = "\(String(describing: item.id))"
+        
     }
 
 }
