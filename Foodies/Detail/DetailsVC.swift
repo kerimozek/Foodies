@@ -27,4 +27,7 @@ class DetailsVC: UIViewController {
         categoryLabel.text = "\(String(describing: detail?.id)))"
     }
 
+    @IBAction func backButtonTapped(_ sender: Any) {
+        navigationController?.popViewController(animated: true)
+    }
 }

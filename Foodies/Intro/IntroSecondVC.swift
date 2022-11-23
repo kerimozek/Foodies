@@ -22,7 +22,8 @@ class IntroSecondVC: UIViewController {
     
 
     @IBAction func secondIntroButtonTapped(_ sender: Any) {
-        navigationController?.popViewController(animated: true)
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "HomeVC") as? HomeVC
+        navigationController?.pushViewController(vc!, animated: true)
     }
     
 

@@ -1,5 +1,5 @@
 //
-//  SignUpVC.swift
+//  SingInVC.swift
 //  Foodies
 //
 //  Created by Mehmet Kerim ÖZEK on 21.11.2022.
@@ -8,41 +8,48 @@
 import UIKit
 import Firebase
 
-class SignUpVC: UIViewController {
+class LoginVC: UIViewController {
 
-    
     @IBOutlet weak var emailTxt: UITextField!
     @IBOutlet weak var passwordTxt: UITextField!
+    @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var signUpButton: UIButton!
-    @IBOutlet weak var dismissButton: UIButton!
     
+ 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         setupUI()
         
     }
     
     private func setupUI() {
+        loginButton.layer.cornerRadius = 8
         signUpButton.layer.cornerRadius = 8
-        dismissButton.layer.cornerRadius = 8
     }
-    
 
-    @IBAction func signUpButtonTapped(_ sender: Any) {
+
+    @IBAction func loginButtonTapped(_ sender: Any) {
         
         if emailTxt.text != "" && passwordTxt.text != "" {
-            Auth.auth().createUser(withEmail: emailTxt.text!, password: passwordTxt.text!) { authdata, error in
+            Auth.auth().signIn(withEmail: emailTxt.text!, password: passwordTxt.text!) { authdata, error in
+                
                 if error != nil {
                     self.showAlert(title: "Error", message: error?.localizedDescription ?? "Error")
                 }
                 if authdata != nil {
-                    self.navigationController?.popViewController(animated: true)
+                    let vc = self.storyboard?.instantiateViewController(withIdentifier: "IntroFirstVC") as? IntroFirstVC
+                    self.navigationController?.pushViewController(vc!, animated: true)
                 }
             }
         } else {
             showAlert(title: "Error", message: "Username/Pass")
         }
+    }
+    
+
+    @IBAction func signUpButtonTapped(_ sender: Any) {
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "SignUpVC") as? SignUpVC
+        self.navigationController?.pushViewController(vc!, animated: true)
     }
         
         func showAlert(title: String, message: String) {
@@ -51,9 +58,7 @@ class SignUpVC: UIViewController {
             alert.addAction(okButton)
             self.present(alert, animated: true, completion: nil)
         }
-    
-    @IBAction func dismissButtonTapped(_ sender: Any) {
-        navigationController?.popViewController(animated: true)
+        
+        
     }
-    
-}
+
