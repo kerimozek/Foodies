@@ -15,14 +15,29 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         
+        let board = UIStoryboard(name: "Main", bundle: nil)
         let currentUser = Auth.auth().currentUser
+        
         if currentUser != nil {
-            let board = UIStoryboard(name: "Main", bundle: nil)
-            let tabBar = board.instantiateViewController(withIdentifier: "tabBar") as! UITabBarController
+            let tabBar = board.instantiateViewController(withIdentifier: "tabBar")
             window?.rootViewController = tabBar
+        } else {
+            let loginNavController = board.instantiateViewController(withIdentifier: "loginNavBar")
+            window?.rootViewController = loginNavController
         }
         
         guard let _ = (scene as? UIWindowScene) else { return }
+    }
+    
+    func changeRootViewController(_ vc: UIViewController, animated: Bool = true) {
+        guard let window = self.window else { return }
+        // change the root view controller to your specific view controller
+        window.rootViewController = vc
+        UIView.transition(with: window,
+                              duration: 0.5,
+                              options: [.transitionFlipFromLeft],
+                              animations: nil,
+                              completion: nil)
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

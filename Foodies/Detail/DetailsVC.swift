@@ -26,8 +26,4 @@ class DetailsVC: UIViewController {
         self.detailImage.kf.setImage(with: URL(string: detail?.image ?? image))
         categoryLabel.text = "\(String(describing: detail?.id)))"
     }
-
-    @IBAction func backButtonTapped(_ sender: Any) {
-        navigationController?.popViewController(animated: true)
-    }
 }

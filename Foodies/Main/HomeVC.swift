@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 
 class HomeVC: UIViewController {
 
@@ -35,6 +36,16 @@ class HomeVC: UIViewController {
         
     }
     
+    @IBAction func logOutButtonTapped(_ sender: Any) {
+        do {
+            try Auth.auth().signOut()
+            let board = UIStoryboard(name: "Main", bundle: nil)
+            let navBar = board.instantiateViewController(withIdentifier: "loginNavBar")
+            (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootViewController(navBar)
+        } catch {
+            print(error.localizedDescription)
+        }
+    }
 }
 
 extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {

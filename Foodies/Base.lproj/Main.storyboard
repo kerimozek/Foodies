@@ -67,7 +67,13 @@
                             <constraint firstItem="Yyv-Fb-z74" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zWQ-us-HE7"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="TODAY'S SWEETS" id="WuV-Ws-zBL"/>
+                    <navigationItem key="navigationItem" title="TODAY'S SWEETS" id="WuV-Ws-zBL">
+                        <barButtonItem key="rightBarButtonItem" title="Logout" id="kdS-aI-rdF">
+                            <connections>
+                                <action selector="logOutButtonTapped:" destination="BYZ-38-t0r" id="X7P-WN-yHu"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="bottomCollectionView" destination="Yyv-Fb-z74" id="m4s-yD-tVc"/>
                         <outlet property="topCollectionView" destination="p8Y-dA-ebb" id="4ZJ-ir-JBV"/>
@@ -100,7 +106,13 @@
                             <constraint firstItem="wWn-Dx-SKC" firstAttribute="leading" secondItem="PKV-V6-4cI" secondAttribute="leading" id="sPg-JO-gzp"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="Vho-2P-FiF"/>
+                    <navigationItem key="navigationItem" id="Vho-2P-FiF">
+                        <barButtonItem key="rightBarButtonItem" title="Logout" id="zRX-ok-rza">
+                            <connections>
+                                <action selector="logOutButtonTapped:" destination="CmD-hA-z7N" id="nzk-g3-8b0"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="searchTableView" destination="wWn-Dx-SKC" id="qxo-zL-XPy"/>
                     </connections>
@@ -135,14 +147,6 @@
                                 <color key="textColor" systemColor="systemBlueColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T3Y-Md-uUT">
-                                <rect key="frame" x="179" y="494" width="56" height="31"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Back"/>
-                                <connections>
-                                    <action selector="backButtonTapped:" destination="1dp-HX-RBI" eventType="touchUpInside" id="6Rf-2A-jLO"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="2Ok-hq-zwI"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -154,10 +158,9 @@
                             <constraint firstItem="xZJ-ko-Omc" firstAttribute="top" secondItem="cXZ-kp-rpq" secondAttribute="bottom" constant="12" id="EVe-pq-wjG"/>
                             <constraint firstItem="2Ok-hq-zwI" firstAttribute="trailing" secondItem="cXZ-kp-rpq" secondAttribute="trailing" constant="12" id="F6T-vr-t6Q"/>
                             <constraint firstItem="2Ok-hq-zwI" firstAttribute="trailing" secondItem="xZJ-ko-Omc" secondAttribute="trailing" constant="12" id="Qlx-h8-Evh"/>
-                            <constraint firstItem="T3Y-Md-uUT" firstAttribute="centerX" secondItem="MQn-gL-PgL" secondAttribute="centerX" id="gIZ-2O-u7V"/>
                             <constraint firstItem="9Mt-6D-yKN" firstAttribute="top" secondItem="2Ok-hq-zwI" secondAttribute="top" constant="30" id="gOJ-Bm-fW5"/>
+                            <constraint firstItem="2Ok-hq-zwI" firstAttribute="bottom" relation="lessThanOrEqual" secondItem="xZJ-ko-Omc" secondAttribute="bottom" constant="417.5" id="iAv-bz-BMy"/>
                             <constraint firstItem="cXZ-kp-rpq" firstAttribute="leading" secondItem="2Ok-hq-zwI" secondAttribute="leading" constant="12" id="wLw-7H-YJg"/>
-                            <constraint firstItem="T3Y-Md-uUT" firstAttribute="top" secondItem="xZJ-ko-Omc" secondAttribute="bottom" constant="49.5" id="xGq-YU-0Co"/>
                         </constraints>
                     </view>
                     <connections>
@@ -222,7 +225,13 @@
                             <constraint firstItem="Y6N-1N-W6r" firstAttribute="leading" secondItem="r5y-MS-v57" secondAttribute="leading" id="oyF-v7-JiW"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="RANDOM MENU" id="tWa-bD-qd5"/>
+                    <navigationItem key="navigationItem" title="RANDOM MENU" id="tWa-bD-qd5">
+                        <barButtonItem key="rightBarButtonItem" title="Logout" id="DIi-80-h2b">
+                            <connections>
+                                <action selector="logOutButtonTapped:" destination="xGZ-sX-E2L" id="ZXA-2m-4f7"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="buttonStyle" destination="vFd-EY-fyv" id="9dv-1F-eBd"/>
                         <outlet property="randomTableView" destination="7qe-kH-hor" id="aJQ-bD-jWz"/>
@@ -254,7 +263,13 @@
                             <constraint firstItem="EI3-k1-Gx8" firstAttribute="leading" secondItem="k9R-do-wnA" secondAttribute="leading" id="jQA-8w-Npv"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="FAVORITES" id="pJW-ze-gmD"/>
+                    <navigationItem key="navigationItem" title="FAVORITES" id="pJW-ze-gmD">
+                        <barButtonItem key="rightBarButtonItem" title="Logout" id="LVq-5Q-Ci6">
+                            <connections>
+                                <action selector="logOutButtonTapped:" destination="hw5-yr-Ode" id="cD9-tW-Wai"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="favoritesTableView" destination="EI3-k1-Gx8" id="LZu-Na-G0Z"/>
                     </connections>
@@ -708,7 +723,7 @@
         <!--Navigation Controller-->
         <scene sceneID="wLd-aJ-IMN">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="JgJ-1e-QbC" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="loginNavBar" automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="JgJ-1e-QbC" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="J0I-pQ-Asy">
                         <autoresizingMask key="autoresizingMask"/>

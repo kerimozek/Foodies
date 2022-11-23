@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 
 class SearchVC: UIViewController {
    
@@ -50,6 +51,16 @@ class SearchVC: UIViewController {
   
     }
     
+    @IBAction func logOutButtonTapped(_ sender: Any) {
+        do {
+            try Auth.auth().signOut()
+            let board = UIStoryboard(name: "Main", bundle: nil)
+            let navBar = board.instantiateViewController(withIdentifier: "loginNavBar")
+            (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootViewController(navBar)
+        } catch {
+            print(error.localizedDescription)
+        }
+    }
 }
 
 extension SearchVC: UITableViewDelegate, UITableViewDataSource {

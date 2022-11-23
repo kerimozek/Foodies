@@ -8,6 +8,7 @@
 import Foundation
 
 import UIKit
+import Firebase
 
 class FavoritesVC: UIViewController {
 
@@ -23,6 +24,17 @@ class FavoritesVC: UIViewController {
         favoritesTableView.delegate = self
         favoritesTableView.dataSource = self
         favoritesTableView.register(.init(nibName: "FavoritesCell", bundle: nil), forCellReuseIdentifier: favoritesTableViewID)
+  }
+    
+    @IBAction func logOutButtonTapped(_ sender: Any) {
+        do {
+            try Auth.auth().signOut()
+            let board = UIStoryboard(name: "Main", bundle: nil)
+            let navBar = board.instantiateViewController(withIdentifier: "loginNavBar")
+            (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootViewController(navBar)
+        } catch {
+            print(error.localizedDescription)
+        }
     }
 }
 

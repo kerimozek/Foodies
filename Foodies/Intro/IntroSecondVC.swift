@@ -22,8 +22,13 @@ class IntroSecondVC: UIViewController {
     
 
     @IBAction func secondIntroButtonTapped(_ sender: Any) {
-        let vc = self.storyboard?.instantiateViewController(withIdentifier: "HomeVC") as? HomeVC
-        navigationController?.pushViewController(vc!, animated: true)
+        
+        let board = UIStoryboard(name: "Main", bundle: nil)
+        let tabBar = board.instantiateViewController(withIdentifier: "tabBar")
+        (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootViewController(tabBar)
+        
+//        let vc = self.storyboard?.instantiateViewController(withIdentifier: "HomeVC") as? HomeVC
+//        navigationController?.pushViewController(vc!, animated: true)
     }
     
 
