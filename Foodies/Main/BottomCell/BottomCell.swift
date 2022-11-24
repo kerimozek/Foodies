@@ -13,7 +13,7 @@ class BottomCell: UICollectionViewCell {
     @IBOutlet weak var pointLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var bottomImageView: UIImageView!
-    @IBOutlet weak var bottomView: UIView!
+    @IBOutlet weak var bottomView: DropShadowView!
     
     @IBOutlet weak var containerView: UIView!
     override func awakeFromNib() {

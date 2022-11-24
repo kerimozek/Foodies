@@ -24,13 +24,20 @@
                                 <rect key="frame" x="0.0" y="0.0" width="454" height="161"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="252" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Qr-H9-Igq">
-                                <rect key="frame" x="8" y="169" width="438" height="16"/>
+                                <rect key="frame" x="8" y="163" width="438" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="zwt-dX-QmZ"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="16"/>
                                 <color key="textColor" red="0.98039215690000003" green="0.96862745100000003" blue="0.94117647059999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tX5-9k-nBh">
-                                <rect key="frame" x="8" y="193" width="438" height="29"/>
+                                <rect key="frame" x="371" y="201" width="75" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="75" id="HvI-Zl-Jue"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="25" id="RzT-8R-O0N"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="11"/>
                                 <color key="textColor" red="0.98039215690000003" green="0.96862745100000003" blue="0.94117647059999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -46,8 +53,7 @@
                             <constraint firstAttribute="bottom" secondItem="tX5-9k-nBh" secondAttribute="bottom" constant="8" id="YQO-TK-g0m"/>
                             <constraint firstAttribute="trailing" secondItem="9ec-WI-cpg" secondAttribute="trailing" id="bGu-UW-Kg7"/>
                             <constraint firstAttribute="trailing" secondItem="tX5-9k-nBh" secondAttribute="trailing" constant="8" id="d3u-zC-9Vq"/>
-                            <constraint firstItem="2Qr-H9-Igq" firstAttribute="top" secondItem="9ec-WI-cpg" secondAttribute="bottom" constant="8" id="fFH-5k-KKG"/>
-                            <constraint firstItem="tX5-9k-nBh" firstAttribute="leading" secondItem="stq-th-GfR" secondAttribute="leading" constant="8" id="i5R-CV-PNV"/>
+                            <constraint firstItem="2Qr-H9-Igq" firstAttribute="top" secondItem="9ec-WI-cpg" secondAttribute="bottom" constant="2" id="fFH-5k-KKG"/>
                             <constraint firstItem="9ec-WI-cpg" firstAttribute="height" secondItem="stq-th-GfR" secondAttribute="height" multiplier="0.7" id="jEB-I6-IKY"/>
                             <constraint firstItem="2Qr-H9-Igq" firstAttribute="leading" secondItem="stq-th-GfR" secondAttribute="leading" constant="8" id="lSG-T9-4IA"/>
                         </constraints>

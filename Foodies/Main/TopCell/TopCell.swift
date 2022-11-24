@@ -13,8 +13,7 @@ class TopCell: UICollectionViewCell {
     @IBOutlet weak var topCellImageView: UIImageView!
     @IBOutlet weak var topCellView: UIView!
     @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var containerView: UIView!
-    
+    @IBOutlet weak var containerView: DropShadowView!
     
     override func awakeFromNib() {
         super.awakeFromNib()

@@ -25,6 +25,7 @@ class FavoritesVC: UIViewController {
         favoritesTableView.delegate = self
         favoritesTableView.dataSource = self
         favoritesTableView.register(.init(nibName: "FavoritesCell", bundle: nil), forCellReuseIdentifier: favoritesTableViewID)
+        favoritesTableView.reloadData()
   }
     
     @IBAction func logOutButtonTapped(_ sender: Any) {
@@ -59,5 +60,15 @@ extension FavoritesVC: UITableViewDelegate, UITableViewDataSource {
         let vc = storyboard?.instantiateViewController(withIdentifier: "DetailsVC") as! DetailsVC
         vc.detail = SearchNetworkManager.shared.dinner[indexPath.row]
         navigationController?.pushViewController(vc, animated: true)
+    }
+}
+
+extension FavoritesVC: SearchNetworkManagerDelegate {
+    func didFetchData(isDone: Bool) {
+        if isDone {
+            DispatchQueue.main.async {
+                self.favoritesTableView.reloadData()
+            }
+        }
     }
 }

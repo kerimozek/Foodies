@@ -13,23 +13,23 @@ class FavoritesCell: UITableViewCell {
     @IBOutlet weak var detailLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var favoritesImageView: UIImageView!
-    @IBOutlet weak var favoritesView: UIView!
+    @IBOutlet weak var favoritesView: DropShadowView!
+    @IBOutlet weak var containerView: UIView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
        
-        favoritesImageView.layer.cornerRadius = 8
-        
+        favoritesView.backgroundColor = UIColor(red: 0.60, green: 0.66, blue: 0.97, alpha: 1.00)
         favoritesView.layer.cornerRadius = 10
-        favoritesView.layer.masksToBounds = true
+        favoritesView.layer.shadowColor = UIColor.darkGray.cgColor
+        favoritesView.layer.shadowOffset = CGSize(width: 3.0, height: 3.0)
+        favoritesView.layer.shadowRadius = 4.0
+        favoritesView.layer.shadowOpacity = 0.4
         
-        self.layer.cornerRadius = 15.0
-        self.layer.borderWidth = 0.0
-        self.layer.shadowColor = UIColor.black.withAlphaComponent(0.2).cgColor
-        self.layer.shadowOffset = CGSize(width: 0, height: 0)
-        self.layer.shadowRadius = 5.0
-        self.layer.shadowOpacity = 1
-        self.layer.masksToBounds = false
+        favoritesImageView.layer.cornerRadius = 10
+        favoritesImageView.clipsToBounds = true
+        
+        containerView.backgroundColor = UIColor.clear
         
     }
  

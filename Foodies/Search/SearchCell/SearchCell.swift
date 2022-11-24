@@ -10,7 +10,7 @@ import Kingfisher
 
 class SearchCell: UITableViewCell {
 
-    @IBOutlet weak var searchView: UIView!
+    @IBOutlet weak var searchView: DropShadowView!
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var minuteLabel: UILabel!
     @IBOutlet weak var pointLabel: UILabel!
@@ -32,7 +32,7 @@ class SearchCell: UITableViewCell {
         searchImageView.clipsToBounds = true
         
         containerView.backgroundColor = UIColor.clear
-    
+       
     }
 
     func configureCell(item: Recipe) {

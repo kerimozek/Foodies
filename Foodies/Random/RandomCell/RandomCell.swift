@@ -10,7 +10,7 @@ import Kingfisher
 
 class RandomCell: UITableViewCell {
 
-    @IBOutlet weak var randomView: UIView!
+    @IBOutlet weak var randomView: DropShadowView!
     @IBOutlet weak var randomTitle: UILabel!
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var randomImageView: UIImageView!

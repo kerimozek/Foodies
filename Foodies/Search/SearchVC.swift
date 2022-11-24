@@ -11,7 +11,6 @@ import Firebase
 class SearchVC: UIViewController {
    
 
-    @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var searchTableView: UITableView!
     let searchCell = "SearchCell"
     let searchController = UISearchController(searchResultsController: nil)
@@ -32,7 +31,7 @@ class SearchVC: UIViewController {
         SearchNetworkManager.shared.delegate = self
         SearchNetworkManager.shared.fetchData()
         configureSearchController()
-        
+        searchTableView.reloadData()
     }
     
     private func configureSearchController() {
