@@ -15,23 +15,23 @@ class SearchCell: UITableViewCell {
     @IBOutlet weak var minuteLabel: UILabel!
     @IBOutlet weak var pointLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var searchImageView: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        searchImageView.layer.cornerRadius = 10
-        searchView.layer.cornerRadius = 10
-        searchView.layer.masksToBounds = true
-        searchView.backgroundColor = UIColor(red: 0.60, green: 0.66, blue: 0.97, alpha: 1.00)
 
-        self.layer.cornerRadius = 10.0
-        self.layer.borderWidth = 0.0
-        self.layer.shadowColor = UIColor.lightGray.withAlphaComponent(0.7).cgColor
-        self.layer.shadowOffset = CGSize(width: 0, height: 0)
-        self.layer.shadowRadius = 5.0
-        self.layer.shadowOpacity = 1
-        self.layer.masksToBounds = false
+        searchView.backgroundColor = UIColor(red: 0.60, green: 0.66, blue: 0.97, alpha: 1.00)
+        searchView.layer.cornerRadius = 10
+        searchView.layer.shadowColor = UIColor.darkGray.cgColor
+        searchView.layer.shadowOffset = CGSize(width: 3.0, height: 3.0)
+        searchView.layer.shadowRadius = 4.0
+        searchView.layer.shadowOpacity = 0.4
         
+        searchImageView.layer.cornerRadius = 10
+        searchImageView.clipsToBounds = true
+        
+        containerView.backgroundColor = UIColor.clear
     
     }
 

@@ -31,6 +31,7 @@ class RandomVC: UIViewController {
     
     private func setupUI() {
         buttonStyle.layer.cornerRadius = 6
+        buttonStyle.backgroundColor = UIColor(red: 0.60, green: 0.66, blue: 0.97, alpha: 1.00)
         randomTableView.delegate = self
         randomTableView.dataSource = self
         randomTableView.register(.init(nibName: "RandomCell", bundle: nil), forCellReuseIdentifier: randomTableViewCell)
@@ -94,7 +95,6 @@ extension RandomVC: UITableViewDelegate, UITableViewDataSource {
         let vc = storyboard?.instantiateViewController(withIdentifier: "DetailsVC") as! DetailsVC
         vc.detail = medetcan[indexPath.row]
         navigationController?.pushViewController(vc, animated: true)
-        print("clicked")
     }
     
 }

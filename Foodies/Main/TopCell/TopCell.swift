@@ -13,24 +13,23 @@ class TopCell: UICollectionViewCell {
     @IBOutlet weak var topCellImageView: UIImageView!
     @IBOutlet weak var topCellView: UIView!
     @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var containerView: UIView!
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        topCellView.layer.cornerRadius = 8
-        topCellView.layer.masksToBounds = false
-        topCellView.backgroundColor = UIColor(red: 0.60, green: 0.66, blue: 0.97, alpha: 1.00)
-        topCellImageView.layer.cornerRadius = 8
-        nameLabel.backgroundColor = UIColor(red: 0.11, green: 0.13, blue: 0.15, alpha: 0.2)
-        nameLabel.layer.masksToBounds = true
-        nameLabel.layer.cornerRadius = 5
         
-        self.layer.cornerRadius = 15.0
-        self.layer.borderWidth = 0.0
-        self.layer.shadowColor = UIColor.black.withAlphaComponent(0.3).cgColor
-        self.layer.shadowOffset = CGSize(width: 0, height: 0)
-        self.layer.shadowRadius = 5.0
-        self.layer.shadowOpacity = 1
-        self.layer.masksToBounds = false
+        topCellView.backgroundColor = UIColor(red: 0.60, green: 0.66, blue: 0.97, alpha: 1.00)
+        topCellView.layer.cornerRadius = 10
+        topCellView.layer.shadowColor = UIColor.darkGray.cgColor
+        topCellView.layer.shadowOffset = CGSize(width: 3.0, height: 3.0)
+        topCellView.layer.shadowRadius = 4.0
+        topCellView.layer.shadowOpacity = 0.4
+        
+        topCellImageView.layer.cornerRadius = 10
+        topCellImageView.clipsToBounds = true
+        
+        containerView.backgroundColor = UIColor.clear
     }
 
     func configureCell(item: Recipe) {

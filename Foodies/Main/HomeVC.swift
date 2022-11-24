@@ -93,7 +93,7 @@ extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollec
         if collectionView == self.topCollectionView {
             return CGSize(width: collectionView.frame.width / 1.5 , height: collectionView.frame.height)
         } else {
-            return CGSize(width: (collectionView.frame.width + 40) / 2.5 , height: (collectionView.frame.height + 30) / 1.8)
+            return CGSize(width: (collectionView.frame.width + 60 ) / 2.5 , height: (collectionView.frame.height + 30) / 1.8)
         }
         
     }

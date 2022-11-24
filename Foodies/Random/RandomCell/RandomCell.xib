@@ -22,33 +22,34 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sib-mv-kvw">
-                        <rect key="frame" x="16" y="12" width="340" height="161"/>
+                        <rect key="frame" x="16" y="12" width="340" height="184"/>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YKR-d7-q17">
-                        <rect key="frame" x="24" y="181" width="324" height="65"/>
-                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                        <rect key="frame" x="24" y="200" width="324" height="42"/>
+                        <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="16"/>
                         <color key="textColor" red="0.98039215690000003" green="0.96862745100000003" blue="0.94117647059999998" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="sib-mv-kvw" firstAttribute="height" secondItem="zjX-zE-yPq" secondAttribute="height" multiplier="0.7" id="1We-Ei-WJE"/>
+                    <constraint firstItem="sib-mv-kvw" firstAttribute="height" secondItem="zjX-zE-yPq" secondAttribute="height" multiplier="0.8" id="1We-Ei-WJE"/>
                     <constraint firstAttribute="trailing" secondItem="sib-mv-kvw" secondAttribute="trailing" constant="16" id="3ZT-mO-HsK"/>
                     <constraint firstItem="sib-mv-kvw" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="4tb-mL-2hM"/>
                     <constraint firstItem="sib-mv-kvw" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="KMz-Kl-lhe"/>
                     <constraint firstAttribute="bottom" secondItem="zjX-zE-yPq" secondAttribute="bottom" constant="16" id="Lpe-tF-o87"/>
-                    <constraint firstItem="YKR-d7-q17" firstAttribute="top" secondItem="sib-mv-kvw" secondAttribute="bottom" constant="8" id="Roq-rg-PDN"/>
+                    <constraint firstItem="YKR-d7-q17" firstAttribute="top" secondItem="sib-mv-kvw" secondAttribute="bottom" constant="4" id="Roq-rg-PDN"/>
                     <constraint firstItem="zjX-zE-yPq" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="YAI-bk-GDj"/>
                     <constraint firstItem="YKR-d7-q17" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="24" id="aoj-cC-bDu"/>
                     <constraint firstItem="zjX-zE-yPq" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="eLn-d7-Fo5"/>
                     <constraint firstAttribute="trailing" secondItem="YKR-d7-q17" secondAttribute="trailing" constant="24" id="oQT-yt-Hlp"/>
                     <constraint firstAttribute="trailing" secondItem="zjX-zE-yPq" secondAttribute="trailing" constant="16" id="pO7-vC-snS"/>
-                    <constraint firstItem="zjX-zE-yPq" firstAttribute="bottom" secondItem="YKR-d7-q17" secondAttribute="bottom" id="qUy-Rs-xfv"/>
+                    <constraint firstItem="zjX-zE-yPq" firstAttribute="bottom" secondItem="YKR-d7-q17" secondAttribute="bottom" constant="4" id="qUy-Rs-xfv"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
+                <outlet property="containerView" destination="H2p-sc-9uM" id="9fq-8p-h2E"/>
                 <outlet property="randomImageView" destination="sib-mv-kvw" id="eSD-NT-282"/>
                 <outlet property="randomTitle" destination="YKR-d7-q17" id="Mpz-9m-8eJ"/>
                 <outlet property="randomView" destination="zjX-zE-yPq" id="eRp-Vp-j15"/>
