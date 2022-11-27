@@ -24,13 +24,13 @@ class DetailsVC: UIViewController {
         
         super.viewDidLoad()
         summaryText.isEditable = false
-        servingTime.text = "Serving Time: \(String(describing: detail?.servings))"
-        summaryText.text = detail?.summary
+        servingTime.text = "Serving Time: \(detail?.servings ?? 31) Minutes"
+        summaryText.attributedText = detail?.summary?.convertHtmlToAttributedStringWithCSS(font: UIFont(name: "Arial", size: 14), csscolor: "black", lineheight: 5, csstextalign: "left")
 
         detailTitle.text = detail?.title
         let image = "https://i.dlpng.com/static/png/7210818_preview.png"
         self.detailImage.kf.setImage(with: URL(string: detail?.image ?? image))
-        categoryLabel.text = "\(String(describing: detail?.id)))"
+        categoryLabel.text = "\(detail?.id ?? 31)"
         
         detailView.backgroundColor = UIColor(red: 0.60, green: 0.66, blue: 0.97, alpha: 1.00)
         detailView.layer.cornerRadius = 10
