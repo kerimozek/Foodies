@@ -14,8 +14,8 @@ class FavoritesVC: UIViewController {
 
     @IBOutlet weak var favoritesTableView: UITableView!
     let favoritesTableViewID = "favoritesTableView"
-    
-    
+
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
@@ -27,7 +27,7 @@ class FavoritesVC: UIViewController {
         favoritesTableView.register(.init(nibName: "FavoritesCell", bundle: nil), forCellReuseIdentifier: favoritesTableViewID)
         favoritesTableView.reloadData()
   }
-    
+
     @IBAction func logOutButtonTapped(_ sender: Any) {
         do {
             try Auth.auth().signOut()
@@ -41,34 +41,34 @@ class FavoritesVC: UIViewController {
 }
 
 extension FavoritesVC: UITableViewDelegate, UITableViewDataSource {
-    
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return SearchNetworkManager.shared.dinner.count
+        return SearchViewModel.shared.drinks.count
     }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = favoritesTableView.dequeueReusableCell(withIdentifier: favoritesTableViewID, for: indexPath) as! FavoritesCell
-        let item = SearchNetworkManager.shared.dinner[indexPath.row]
+        let item = SearchViewModel.shared.drinks[indexPath.row]
         cell.configureCell(item: item)
         let backgroundView = UIView()
         backgroundView.backgroundColor = UIColor.clear
         cell.selectedBackgroundView = backgroundView
         return cell
     }
-    
+
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let vc = storyboard?.instantiateViewController(withIdentifier: "DetailsVC") as! DetailsVC
-        vc.detail = SearchNetworkManager.shared.dinner[indexPath.row]
+        vc.detail = SearchViewModel.shared.drinks[indexPath.row]
         navigationController?.pushViewController(vc, animated: true)
     }
 }
 
-extension FavoritesVC: SearchNetworkManagerDelegate {
-    func didFetchData(isDone: Bool) {
+extension FavoritesVC: SearchViewModelDelegate {
+    func didGetDrinks(isDone: Bool) {
         if isDone {
             DispatchQueue.main.async {
                 self.favoritesTableView.reloadData()
             }
         }
     }
-}
+ }

@@ -33,7 +33,7 @@ class FavoritesCell: UITableViewCell {
         
     }
  
-    func configureCell(item: Recipe) {
+    func configureCell(item: Search) {
         let image = "https://i.dlpng.com/static/png/7210818_preview.png"
         self.titleLabel.text = item.title
         self.favoritesImageView.kf.setImage(with: URL(string: item.image ?? image))
