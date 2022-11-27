@@ -14,11 +14,11 @@ class RandomVC: UIViewController {
     @IBOutlet weak var randomTableView: UITableView!
     @IBOutlet weak var buttonStyle: UIButton!
     let randomTableViewCell = "randomTableViewCell"
-    var medetcan: [BaseModel] = []
+    var baseList: [BaseModel] = []
     var count = 0 {
         didSet {
             if count == 3 {
-                sametcan()
+                baseListCreate()
             }
         }
     }
@@ -26,7 +26,6 @@ class RandomVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
-    
     }
     
     private func setupUI() {
@@ -35,25 +34,37 @@ class RandomVC: UIViewController {
         randomTableView.delegate = self
         randomTableView.dataSource = self
         randomTableView.register(.init(nibName: "RandomCell", bundle: nil), forCellReuseIdentifier: randomTableViewCell)
-        RandomNetworkManager.shared.delegate = self
-        RandomNetworkManager.shared.getBreakfast()
-        RandomNetworkManager.shared.getDinner()
-        RandomNetworkManager.shared.getSweets()
+        RandomViewModel.shared.delegate = self
+        RandomViewModel.shared.getSweetsItems{ errorMessage in
+            if let errorMessage = errorMessage {
+                print("error \(errorMessage)")
+            }
+        }
+        RandomViewModel.shared.getDinnerItems{ errorMessage in
+            if let errorMessage = errorMessage {
+                print("error \(errorMessage)")
+            }
+        }
+        RandomViewModel.shared.getDrinkItems{ errorMessage in
+            if let errorMessage = errorMessage {
+                print("error \(errorMessage)")
+            }
+        }
     }
 
     @IBAction func shuffleButtonTapped(_ sender: Any) {
-        sametcan()
+        baseListCreate()
     }
     
-    private func sametcan() {
-        medetcan.removeAll()
-        let itemDinner = RandomNetworkManager.shared.dinner.shuffled().first
-        let itemSweet = RandomNetworkManager.shared.sweets.shuffled().first
-        let itemDrink = RandomNetworkManager.shared.breakfast.shuffled().first
+    private func baseListCreate() {
+        baseList.removeAll()
+        let itemDinner = RandomViewModel.shared.dinner.shuffled().first
+        let itemSweets = RandomViewModel.shared.sweets.shuffled().first
+        let itemDrinks = RandomViewModel.shared.drinks.shuffled().first
      //   medetcan.append(.init(id: itemDinner?.id, title: itemDinner?.title, image: itemDinner?.image))
-        medetcan.append(itemDinner!)
-        medetcan.append(itemSweet!)
-        medetcan.append(itemDrink!)
+        baseList.append(itemDinner!)
+        baseList.append(itemSweets!)
+        baseList.append(itemDrinks!)
         DispatchQueue.main.async {
             self.randomTableView.reloadData()
         }
@@ -74,12 +85,12 @@ class RandomVC: UIViewController {
 extension RandomVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return medetcan.count
+        return baseList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = randomTableView.dequeueReusableCell(withIdentifier: randomTableViewCell, for: indexPath) as! RandomCell
-        let item = medetcan[indexPath.row]
+        let item = baseList[indexPath.row]
         cell.configureCell(item: item)
         let backgroundView = UIView()
         backgroundView.backgroundColor = UIColor.clear
@@ -93,24 +104,24 @@ extension RandomVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let vc = storyboard?.instantiateViewController(withIdentifier: "DetailsVC") as! DetailsVC
-        vc.detail = medetcan[indexPath.row]
+        vc.detail = baseList[indexPath.row]
         navigationController?.pushViewController(vc, animated: true)
     }
     
 }
 
-extension RandomVC: RandomNetworkManagerDelegate {
-    func getDinnerData(isDone: Bool) {
+extension RandomVC: RandomViewModelDelegate {
+    func didGetSweets(isDone: Bool) {
         if isDone {
             count += 1
         }
     }
-    func getSweetsData(isDone: Bool) {
+    func didGetDinner(isDone: Bool) {
         if isDone {
             count += 1
         }
     }
-    func getBreakfastData(isDone: Bool) {
+    func didGetDrinks(isDone: Bool) {
         if isDone {
             count += 1
         }
