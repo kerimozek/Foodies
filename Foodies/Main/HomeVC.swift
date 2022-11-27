@@ -31,9 +31,17 @@ class HomeVC: UIViewController {
         topCollectionView.register(.init(nibName: "TopCell", bundle: nil), forCellWithReuseIdentifier: topCollectionViewID)
         bottomCollectionView.register(.init(nibName: "BottomCell", bundle: nil), forCellWithReuseIdentifier: bottomCollectionViewID)
         MainNetworkManager.shared.delegate = self
-        MainNetworkManager.shared.fetchData()
         MainNetworkManager.shared.getData()
         
+        
+        MainNetworkManager.shared.getDinnerItems { errorMessage in
+            if let errorMessage = errorMessage {
+                print("error \(errorMessage)")
+            }
+        }
+        
+    //    MainNetworkManager.shared.fetchData()
+     
     }
     
     @IBAction func logOutButtonTapped(_ sender: Any) {
