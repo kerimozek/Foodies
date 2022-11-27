@@ -1,5 +1,5 @@
 //
-//  DinnerManager.swift
+//  DrinksManager.swift
 //  Foodies
 //
 //  Created by Mehmet Kerim ÖZEK on 27.11.2022.
@@ -7,16 +7,16 @@
 
 import Foundation
 
-class DinnerManager {
+class DrinksManager {
     
-    static let shared = DinnerManager()
+    static let shared = DrinksManager()
     
     // MARK: - MAIN BOTTOM API "https://api.spoonacular.com/recipes/random?number=12&apiKey=f77c23f74bad484cb7d04e9d5070b3dc" -
     
-    let url = "\(NetworkHelper.shared.baseUrl)complexSearch?apiKey=6190a837e2cd420cbf41a6b7d5a14eb6"
+    let url = "\(NetworkHelper.shared.baseUrl)random?number=20&apiKey=f77c23f74bad484cb7d04e9d5070b3dc"
     
-    func getDinner(complete: @escaping((DinnerRecipe?, String?)->())) {
-        NetworkManager.shared.request(type: DinnerRecipe.self,
+    func getDrinks(complete: @escaping((SearchRecipes?, String?)->())) {
+        NetworkManager.shared.request(type: SearchRecipes.self,
                                       url: url,
                                       method: .get) { response in
             switch response {
