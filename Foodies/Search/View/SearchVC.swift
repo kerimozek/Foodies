@@ -14,7 +14,7 @@ class SearchVC: UIViewController {
     @IBOutlet weak var searchTableView: UITableView!
     let searchCell = "SearchCell"
     let searchController = UISearchController(searchResultsController: nil)
-    var searchedData: [Recipe] = []
+    var searchedData: [Search] = []
     var searching = false
     
     override func viewDidLoad() {
@@ -28,8 +28,13 @@ class SearchVC: UIViewController {
         searchTableView.dataSource = self
         searchTableView.delegate = self
         searchTableView.register(.init(nibName: "SearchCell", bundle: nil), forCellReuseIdentifier: searchCell)
-        SearchNetworkManager.shared.delegate = self
-        SearchNetworkManager.shared.fetchData()
+        SearchViewModel.shared.delegate = self
+        
+        SearchViewModel.shared.getSweetsItems{ errorMessage in
+            if let errorMessage = errorMessage {
+                print("error \(errorMessage)")
+            }
+        }
         configureSearchController()
         searchTableView.reloadData()
     }
@@ -66,7 +71,7 @@ extension SearchVC: UITableViewDelegate, UITableViewDataSource {
         if searching {
             return searchedData.count
         } else {
-            return SearchNetworkManager.shared.dinner.count
+            return SearchViewModel.shared.drinks.count
         }
         
     }
@@ -77,7 +82,7 @@ extension SearchVC: UITableViewDelegate, UITableViewDataSource {
             let item = searchedData[indexPath.row]
             cell.configureCell(item: item)
         } else {
-            let item = SearchNetworkManager.shared.dinner[indexPath.row]
+            let item = SearchViewModel.shared.drinks[indexPath.row]
             cell.configureCell(item: item)
         }
         let backgroundView = UIView()
@@ -88,7 +93,7 @@ extension SearchVC: UITableViewDelegate, UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let vc = storyboard?.instantiateViewController(withIdentifier: "DetailsVC") as! DetailsVC
-        vc.detail = SearchNetworkManager.shared.dinner[indexPath.row]
+        vc.detail = SearchViewModel.shared.drinks[indexPath.row]
         navigationController?.pushViewController(vc, animated: true)
     }
     
@@ -104,7 +109,7 @@ extension SearchVC: UISearchResultsUpdating, UISearchBarDelegate {
         if !searchText.isEmpty {
             searching = true
             searchedData.removeAll()
-            for resultData in SearchNetworkManager.shared.dinner {
+            for resultData in SearchViewModel.shared.drinks {
                 if resultData.title!.lowercased().contains(searchText.lowercased()) {
                     searchedData.append(resultData)
                 }
@@ -112,7 +117,7 @@ extension SearchVC: UISearchResultsUpdating, UISearchBarDelegate {
         } else {
             searching = false
             searchedData.removeAll()
-            searchedData = SearchNetworkManager.shared.dinner
+            searchedData = SearchViewModel.shared.drinks
         }
         searchTableView.reloadData()
     }
@@ -124,8 +129,8 @@ extension SearchVC: UISearchResultsUpdating, UISearchBarDelegate {
     }
 }
 
-extension SearchVC: SearchNetworkManagerDelegate {
-    func didFetchData(isDone: Bool) {
+extension SearchVC: SearchViewModelDelegate {
+    func didGetDrinks(isDone: Bool) {
         if isDone {
             DispatchQueue.main.async {
                 self.searchTableView.reloadData()
