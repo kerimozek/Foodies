@@ -31,7 +31,7 @@ class TopCell: UICollectionViewCell {
         containerView.backgroundColor = UIColor.clear
     }
 
-    func configureCell(item: Recipe) {
+    func configureCell(item: Sweets) {
         let image = "https://i.dlpng.com/static/png/7210818_preview.png"
         self.nameLabel.text = item.title
         self.topCellImageView.kf.setImage(with: URL(string: item.image ?? image))

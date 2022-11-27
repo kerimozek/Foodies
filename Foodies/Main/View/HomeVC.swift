@@ -30,18 +30,19 @@ class HomeVC: UIViewController {
         self.view.addSubview(bottomCollectionView)
         topCollectionView.register(.init(nibName: "TopCell", bundle: nil), forCellWithReuseIdentifier: topCollectionViewID)
         bottomCollectionView.register(.init(nibName: "BottomCell", bundle: nil), forCellWithReuseIdentifier: bottomCollectionViewID)
-        MainNetworkManager.shared.delegate = self
-        MainNetworkManager.shared.getData()
+        MainViewModel.shared.delegate = self
         
-        
-        MainNetworkManager.shared.getDinnerItems { errorMessage in
+        MainViewModel.shared.getSweetsItems{ errorMessage in
             if let errorMessage = errorMessage {
                 print("error \(errorMessage)")
             }
         }
         
-    //    MainNetworkManager.shared.fetchData()
-     
+        MainViewModel.shared.getDinnerItems{ errorMessage in
+            if let errorMessage = errorMessage {
+                print("error \(errorMessage)")
+            }
+        }
     }
     
     @IBAction func logOutButtonTapped(_ sender: Any) {
@@ -60,10 +61,10 @@ extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollec
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView == self.topCollectionView {
-            return MainNetworkManager.shared.breakfast.count
+            return MainViewModel.shared.sweets.count
             }
 
-        return MainNetworkManager.shared.sweets.count
+        return MainViewModel.shared.dinner.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -72,27 +73,26 @@ extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollec
             
             let cellA = collectionView.dequeueReusableCell(withReuseIdentifier: topCollectionViewID, for: indexPath) as! TopCell
             
-            let item = MainNetworkManager.shared.breakfast[indexPath.item]
+            let item = MainViewModel.shared.sweets[indexPath.item]
             cellA.configureCell(item: item)
             cellA.backgroundColor = UIColor.clear
             return cellA
         } else {
             let cellB = collectionView.dequeueReusableCell(withReuseIdentifier: bottomCollectionViewID, for: indexPath) as! BottomCell
         
-            let item = MainNetworkManager.shared.sweets[indexPath.item]
+            let item = MainViewModel.shared.dinner[indexPath.item]
             cellB.configureCell(item: item)
             cellB.backgroundColor = UIColor.clear
             return cellB
         }
-        
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let vc = storyboard?.instantiateViewController(withIdentifier: "DetailsVC") as! DetailsVC
         if collectionView == self.topCollectionView {
-            vc.detail = MainNetworkManager.shared.breakfast[indexPath.item]
+            vc.detail = MainViewModel.shared.sweets[indexPath.item]
         } else {
-            vc.detail = MainNetworkManager.shared.sweets[indexPath.item]
+            vc.detail = MainViewModel.shared.dinner[indexPath.item]
         }
         navigationController?.pushViewController(vc, animated: true)
     }
@@ -107,8 +107,8 @@ extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollec
     }
 }
 
-extension HomeVC: NetworkManagerDelegate {
-    func didFetchData(isDone: Bool) {
+extension HomeVC: MainViewModelDelegate {
+    func didGetSweets(isDone: Bool) {
         if isDone {
             DispatchQueue.main.async {
                 self.topCollectionView.reloadData()
@@ -116,7 +116,7 @@ extension HomeVC: NetworkManagerDelegate {
         }
     }
  
-    func didGetData(isDone: Bool) {
+    func didGetDinner(isDone: Bool) {
         if isDone {
             DispatchQueue.main.async {
                 self.bottomCollectionView.reloadData()

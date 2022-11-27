@@ -33,7 +33,7 @@ class BottomCell: UICollectionViewCell {
     }
     
     
-    func configureCell(item: Result2) {
+    func configureCell(item: Dinner) {
         let image = "https://i.dlpng.com/static/png/7210818_preview.png"
         self.titleLabel.text = item.title
         self.bottomImageView.kf.setImage(with: URL(string: item.image ?? image))
