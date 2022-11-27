@@ -20,7 +20,7 @@ class MainNetworkManager {
     private init () { }
     
     var breakfast: [Recipe] = []
-    var sweets: [Result] = []
+    var sweets: [Result2] = []
     
     // MARK: - MAIN TOP API "https://api.spoonacular.com/recipes/random?number=12&apiKey=f77c23f74bad484cb7d04e9d5070b3dc" -
     

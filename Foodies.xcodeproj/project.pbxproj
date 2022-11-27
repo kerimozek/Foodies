@@ -27,6 +27,8 @@
 		6E6A37502924173B00E1EFCC /* RandomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6A374E2924173B00E1EFCC /* RandomCell.swift */; };
 		6E6A37512924173B00E1EFCC /* RandomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E6A374F2924173B00E1EFCC /* RandomCell.xib */; };
 		6E6A37532924177A00E1EFCC /* RandomNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6A37522924177A00E1EFCC /* RandomNetworkManager.swift */; };
+		6E98E68D29328ABF00EE2064 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E98E68C29328ABF00EE2064 /* NetworkManager.swift */; };
+		6E98E69029328BAF00EE2064 /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E98E68F29328BAF00EE2064 /* NetworkHelper.swift */; };
 		6EA00F90292C0EEC001AA212 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA00F8E292C0EEC001AA212 /* LoginVC.swift */; };
 		6EA00F93292C0F24001AA212 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA00F92292C0F24001AA212 /* SignUpVC.swift */; };
 		6EA00F97292CC320001AA212 /* gifLoader+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA00F96292CC320001AA212 /* gifLoader+Ext.swift */; };
@@ -66,6 +68,8 @@
 		6E6A374E2924173B00E1EFCC /* RandomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomCell.swift; sourceTree = "<group>"; };
 		6E6A374F2924173B00E1EFCC /* RandomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RandomCell.xib; sourceTree = "<group>"; };
 		6E6A37522924177A00E1EFCC /* RandomNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomNetworkManager.swift; sourceTree = "<group>"; };
+		6E98E68C29328ABF00EE2064 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		6E98E68F29328BAF00EE2064 /* NetworkHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHelper.swift; sourceTree = "<group>"; };
 		6EA00F8E292C0EEC001AA212 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		6EA00F92292C0F24001AA212 /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
 		6EA00F96292CC320001AA212 /* gifLoader+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "gifLoader+Ext.swift"; sourceTree = "<group>"; };
@@ -107,6 +111,7 @@
 		6E615E33292159B300FD4C48 /* Foodies */ = {
 			isa = PBXGroup;
 			children = (
+				6E98E68B29328AAC00EE2064 /* Network */,
 				6EA00F95292CC30D001AA212 /* Model */,
 				6EA00F94292CC305001AA212 /* Extensions */,
 				6EA00F8D292C0EBC001AA212 /* UserCreation */,
@@ -204,6 +209,23 @@
 				6E6A374F2924173B00E1EFCC /* RandomCell.xib */,
 			);
 			path = RandomCell;
+			sourceTree = "<group>";
+		};
+		6E98E68B29328AAC00EE2064 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				6E98E68E29328BA400EE2064 /* Core */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		6E98E68E29328BA400EE2064 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				6E98E68C29328ABF00EE2064 /* NetworkManager.swift */,
+				6E98E68F29328BAF00EE2064 /* NetworkHelper.swift */,
+			);
+			path = Core;
 			sourceTree = "<group>";
 		};
 		6EA00F8D292C0EBC001AA212 /* UserCreation */ = {
@@ -360,6 +382,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E98E68D29328ABF00EE2064 /* NetworkManager.swift in Sources */,
 				6E615E5329216C5F00FD4C48 /* BottomCell.swift in Sources */,
 				6E627A0E2922702D00925327 /* SearchCell.swift in Sources */,
 				6E5B722C29300BCD0093F91E /* ContainerView+Ext.swift in Sources */,
@@ -375,6 +398,7 @@
 				6EA00F9A292CC35E001AA212 /* IntroFirstVC.swift in Sources */,
 				6EA00F97292CC320001AA212 /* gifLoader+Ext.swift in Sources */,
 				6EA00F93292C0F24001AA212 /* SignUpVC.swift in Sources */,
+				6E98E69029328BAF00EE2064 /* NetworkHelper.swift in Sources */,
 				6ED640A12927C09D00E70385 /* DetailsVC.swift in Sources */,
 				6E615E4F29216C5300FD4C48 /* TopCell.swift in Sources */,
 				6E6A37532924177A00E1EFCC /* RandomNetworkManager.swift in Sources */,

@@ -17,10 +17,10 @@ protocol BaseModel {
 
 // MARK: - MainModel -
 struct RecipeNew: Codable {
-    let results: [Result]?
+    let results: [Result2]?
 }
 
-struct Result: Codable, BaseModel {
+struct Result2: Codable, BaseModel {
     var id: Int?
     var title: String?
     var image: String?
