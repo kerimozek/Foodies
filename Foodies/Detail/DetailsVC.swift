@@ -7,6 +7,8 @@
 
 import UIKit
 import Kingfisher
+import Firebase
+import FirebaseFirestore
 
 class DetailsVC: UIViewController {
  
@@ -17,8 +19,11 @@ class DetailsVC: UIViewController {
     @IBOutlet weak var isVeganImage: UIImageView!
     @IBOutlet weak var summaryText: UITextView!
     @IBOutlet weak var detailView: UIView!
+    @IBOutlet weak var buttonSave: UIButton!
     
     var detail: BaseModel?
+    
+    
     
     override func viewDidLoad() {
         
@@ -26,7 +31,7 @@ class DetailsVC: UIViewController {
         summaryText.isEditable = false
         servingTime.text = "Serving Time: \(detail?.servings ?? 31) Minutes"
         summaryText.attributedText = detail?.summary?.convertHtmlToAttributedStringWithCSS(font: UIFont(name: "Arial", size: 14), csscolor: "black", lineheight: 5, csstextalign: "left")
-
+        buttonSave.layer.cornerRadius = 8
         detailTitle.text = detail?.title
         let image = "https://i.dlpng.com/static/png/7210818_preview.png"
         self.detailImage.kf.setImage(with: URL(string: detail?.image ?? image))
@@ -41,5 +46,27 @@ class DetailsVC: UIViewController {
         
         detailImage.layer.cornerRadius = 10
         detailImage.clipsToBounds = true
+    }
+    
+    
+     
+    
+    @IBAction func saveButtonTapped(_ sender: Any) {
+        Firestore.firestore().collection("Favorites").addDocument(data: [
+            "id" : detail?.id as Any,
+            "title" : detail?.title as Any,
+            "summary_text" : detail?.summary as Any,
+            "image" : detail?.image as Any,
+            "vegan" : detail?.vegan as Any,
+            "serving_time" : detail?.servings as Any,
+            "mail" : Auth.auth().currentUser?.email as Any]) { (error) in
+                    
+                if let error = error {
+                    print(error.localizedDescription)
+                } else {
+                    self.buttonSave.titleLabel?.text = "DELETE"
+                    self.buttonSave.backgroundColor = .red
+                }
+            }
     }
 }

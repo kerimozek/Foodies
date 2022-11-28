@@ -15,6 +15,7 @@ protocol BaseModel {
     var servings: Int? { get set }
     var summary: String? { get set }
     var pricePerServing: Double? { get set }
+    var vegan: Bool? { get set }
 }
 
 //// MARK: - MainModel -

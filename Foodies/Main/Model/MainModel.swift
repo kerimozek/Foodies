@@ -39,10 +39,7 @@ struct Dinner: Codable, BaseModel {
     var readyInMinutes: Int?
     var servings: Int?
     var pricePerServing: Double?
-    var vegan: Int?
-    var glutenFree: String?
+    var vegetarian, vegan, glutenFree, dairyFree: Bool?
     var summary: String?
     var instructions: String?
-    var vegetarian: String?
-
 }

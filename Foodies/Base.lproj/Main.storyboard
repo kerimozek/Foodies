@@ -195,6 +195,21 @@
                                     <constraint firstAttribute="width" constant="24" id="eWp-Dz-PU6"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mcQ-GI-nVw">
+                                <rect key="frame" x="24" y="679" width="366" height="32"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="vB7-wU-5uX"/>
+                                </constraints>
+                                <color key="tintColor" red="0.94117647059999998" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="ADD FAVORITE">
+                                    <fontDescription key="titleFontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="17"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="saveButtonTapped:" destination="1dp-HX-RBI" eventType="touchUpInside" id="za1-T2-Kc7"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="2Ok-hq-zwI"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -203,6 +218,7 @@
                             <constraint firstItem="xZJ-ko-Omc" firstAttribute="top" secondItem="cXZ-kp-rpq" secondAttribute="bottom" constant="4" id="1MD-Ml-VT3"/>
                             <constraint firstItem="xZJ-ko-Omc" firstAttribute="leading" secondItem="2Ok-hq-zwI" secondAttribute="leading" constant="12" id="3e3-qh-Nxs"/>
                             <constraint firstItem="cXZ-kp-rpq" firstAttribute="top" secondItem="pAS-W5-pfE" secondAttribute="bottom" constant="8" id="5sy-wo-riw"/>
+                            <constraint firstItem="mcQ-GI-nVw" firstAttribute="top" secondItem="Il2-dc-xn1" secondAttribute="bottom" constant="40" id="8Oj-jT-pBg"/>
                             <constraint firstItem="Il2-dc-xn1" firstAttribute="top" secondItem="2X7-PQ-5dH" secondAttribute="bottom" constant="8" id="FK1-nU-yQ2"/>
                             <constraint firstItem="fn1-8J-yCd" firstAttribute="centerY" secondItem="pp8-K0-L0H" secondAttribute="centerY" id="HXM-9R-jLE"/>
                             <constraint firstItem="2X7-PQ-5dH" firstAttribute="leading" secondItem="2Ok-hq-zwI" secondAttribute="leading" constant="12" id="Q5a-vS-hVd"/>
@@ -217,12 +233,15 @@
                             <constraint firstItem="2Ok-hq-zwI" firstAttribute="trailing" secondItem="Il2-dc-xn1" secondAttribute="trailing" constant="12" id="ilJ-Q3-Mx1"/>
                             <constraint firstItem="fn1-8J-yCd" firstAttribute="leading" secondItem="pp8-K0-L0H" secondAttribute="trailing" id="kGR-FS-pR7"/>
                             <constraint firstItem="2X7-PQ-5dH" firstAttribute="height" secondItem="MQn-gL-PgL" secondAttribute="height" multiplier="0.25" id="mIp-yK-z2G"/>
+                            <constraint firstItem="mcQ-GI-nVw" firstAttribute="leading" secondItem="2Ok-hq-zwI" secondAttribute="leading" constant="24" id="oT3-sI-hkA"/>
                             <constraint firstItem="pp8-K0-L0H" firstAttribute="top" secondItem="Il2-dc-xn1" secondAttribute="bottom" constant="12" id="r8N-P7-Ckn"/>
+                            <constraint firstItem="2Ok-hq-zwI" firstAttribute="trailing" secondItem="mcQ-GI-nVw" secondAttribute="trailing" constant="24" id="vkW-kQ-VN5"/>
                             <constraint firstItem="2X7-PQ-5dH" firstAttribute="top" secondItem="xZJ-ko-Omc" secondAttribute="bottom" id="x7N-dY-xM1"/>
                             <constraint firstItem="2Ok-hq-zwI" firstAttribute="trailing" secondItem="cXZ-kp-rpq" secondAttribute="trailing" constant="12" id="xy9-f9-Kzx"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="buttonSave" destination="mcQ-GI-nVw" id="ICY-gd-Jw3"/>
                         <outlet property="categoryLabel" destination="cXZ-kp-rpq" id="v9P-GZ-LB9"/>
                         <outlet property="detailImage" destination="9Mt-6D-yKN" id="bFp-AI-AiZ"/>
                         <outlet property="detailTitle" destination="xZJ-ko-Omc" id="dxb-Sp-oWC"/>
