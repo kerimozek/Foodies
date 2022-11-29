@@ -20,8 +20,11 @@ class DetailsVC: UIViewController {
     @IBOutlet weak var summaryText: UITextView!
     @IBOutlet weak var detailView: UIView!
     @IBOutlet weak var buttonSave: UIButton!
-    
     var detail: BaseModel?
+    var db = Firestore.firestore()
+    
+    
+    private var control = false
     
     
     
@@ -52,7 +55,8 @@ class DetailsVC: UIViewController {
      
     
     @IBAction func saveButtonTapped(_ sender: Any) {
-        Firestore.firestore().collection("Favorites").addDocument(data: [
+        
+       db.collection("Favorites").addDocument(data: [
             "id" : detail?.id as Any,
             "title" : detail?.title as Any,
             "summary_text" : detail?.summary as Any,
@@ -60,11 +64,12 @@ class DetailsVC: UIViewController {
             "vegan" : detail?.vegan as Any,
             "serving_time" : detail?.servings as Any,
             "mail" : Auth.auth().currentUser?.email as Any]) { (error) in
-                    
+                
                 if let error = error {
                     print(error.localizedDescription)
                 } else {
                     self.buttonSave.titleLabel?.text = "DELETE"
+                    self.buttonSave.titleLabel?.textAlignment = .center
                     self.buttonSave.backgroundColor = .red
                 }
             }
