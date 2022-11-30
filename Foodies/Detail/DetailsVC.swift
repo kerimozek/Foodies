@@ -56,22 +56,31 @@ class DetailsVC: UIViewController {
     
     @IBAction func saveButtonTapped(_ sender: Any) {
         
-       db.collection("Favorites").addDocument(data: [
-            "id" : detail?.id as Any,
-            "title" : detail?.title as Any,
-            "summary_text" : detail?.summary as Any,
-            "image" : detail?.image as Any,
-            "vegan" : detail?.vegan as Any,
-            "serving_time" : detail?.servings as Any,
-            "mail" : Auth.auth().currentUser?.email as Any]) { (error) in
-                
-                if let error = error {
-                    print(error.localizedDescription)
-                } else {
-                    self.buttonSave.titleLabel?.text = "DELETE"
-                    self.buttonSave.titleLabel?.textAlignment = .center
-                    self.buttonSave.backgroundColor = .red
-                }
-            }
+      
     }
+    
+    
+    
 }
+
+
+
+
+
+//       db.collection("Favorites").addDocument(data: [
+//            "id" : detail?.id as Any,
+//            "title" : detail?.title as Any,
+//            "summary_text" : detail?.summary as Any,
+//            "image" : detail?.image as Any,
+//            "vegan" : detail?.vegan as Any,
+//            "serving_time" : detail?.servings as Any,
+//            "mail" : Auth.auth().currentUser?.email as Any]) { (error) in
+//
+//                if let error = error {
+//                    print(error.localizedDescription)
+//                } else {
+//                    self.buttonSave.titleLabel?.text = "DELETE"
+//                    self.buttonSave.titleLabel?.textAlignment = .center
+//                    self.buttonSave.backgroundColor = .red
+//                }
+//            }

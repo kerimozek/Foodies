@@ -10,12 +10,12 @@ import Foundation
 // MARK: - FavoritesModel -
 
 struct FavoritesRecipes: Codable {
-    let recipes: [Favorites]?
+    let recipes: [Favorite]?
 }
 
 // MARK: - FavoritesRecipe -
 
-struct Favorites: Codable, BaseModel {
+struct Favorite: Codable, BaseModel {
     var id: Int?
     var title: String?
     var image: String?

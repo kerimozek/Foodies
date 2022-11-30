@@ -14,19 +14,48 @@ class FavoritesVC: UIViewController {
 
     @IBOutlet weak var favoritesTableView: UITableView!
     let favoritesTableViewID = "favoritesTableView"
-
-
+    var favoritesData = [Favorite]()
+    var db = Firestore.firestore()
+    var counter = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        getFavorites()
     }
 
     private func setupUI() {
         favoritesTableView.delegate = self
         favoritesTableView.dataSource = self
         favoritesTableView.register(.init(nibName: "FavoritesCell", bundle: nil), forCellReuseIdentifier: favoritesTableViewID)
-        favoritesTableView.reloadData()
   }
+    
+    private func getFavorites() {
+        db.collection("Favorites").whereField("mail", isEqualTo: Auth.auth().currentUser?.email as Any).getDocuments() { (querySnapshot, err) in
+            if let err = err {
+                print("Error getting documents: \(err)")
+            } else {
+                for document in querySnapshot!.documents {
+                    self.counter += 1
+                    let item = document.data()
+                    let baseModel: Favorite = .init(id: item["id"] as? Int,
+                                                    title: item["title"] as? String,
+                                                    image: item["image"] as? String)
+                    
+                    self.favoritesData.append(baseModel)
+                    // item["id"] as! Int == (self.detail?.id)!
+                    //  print("\(document.documentID) => \(document.data())")
+                    
+                    if self.counter == querySnapshot!.documents.count {
+                        self.counter = 0
+                        self.favoritesTableView.reloadData()
+                    }
+                }
+            }
+        }
+    }
+    
+    
 
     @IBAction func logOutButtonTapped(_ sender: Any) {
         do {
@@ -43,12 +72,13 @@ class FavoritesVC: UIViewController {
 extension FavoritesVC: UITableViewDelegate, UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return SearchViewModel.shared.drinks.count
+        return favoritesData.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = favoritesTableView.dequeueReusableCell(withIdentifier: favoritesTableViewID, for: indexPath) as! FavoritesCell
-        let item = SearchViewModel.shared.drinks[indexPath.row]
+        let item = favoritesData[indexPath.row]
+        print(item)
         cell.configureCell(item: item)
         let backgroundView = UIView()
         backgroundView.backgroundColor = UIColor.clear
@@ -58,17 +88,8 @@ extension FavoritesVC: UITableViewDelegate, UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let vc = storyboard?.instantiateViewController(withIdentifier: "DetailsVC") as! DetailsVC
-        vc.detail = SearchViewModel.shared.drinks[indexPath.row]
+        vc.detail = favoritesData[indexPath.row]
         navigationController?.pushViewController(vc, animated: true)
     }
 }
 
-extension FavoritesVC: SearchViewModelDelegate {
-    func didGetDrinks(isDone: Bool) {
-        if isDone {
-            DispatchQueue.main.async {
-                self.favoritesTableView.reloadData()
-            }
-        }
-    }
- }
