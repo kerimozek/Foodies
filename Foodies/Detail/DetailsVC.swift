@@ -22,7 +22,8 @@ class DetailsVC: UIViewController {
     @IBOutlet weak var buttonSave: UIButton!
     var detail: BaseModel?
     var db = Firestore.firestore()
-    
+    var documentID: String?
+    var state: Bool!
     
     private var control = false
     
@@ -51,36 +52,90 @@ class DetailsVC: UIViewController {
         detailImage.clipsToBounds = true
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        checkFavorites(id: (detail?.id)!)
+    }
+    
     
      
     
     @IBAction func saveButtonTapped(_ sender: Any) {
-        
-      
+        guard let state = state else {
+            print("GUARD")
+            return
+            
+        }
+        doSomething(state: state)
     }
     
+    private func checkFavorites(id: Int) {
+        state = false
+        db.collection("Favorites").whereField("mail", isEqualTo: Auth.auth().currentUser?.email as Any).getDocuments() { (querySnapshot, err) in
+            if let err = err {
+                print("Error getting documents: \(err)")
+            } else {
+                for document in querySnapshot!.documents {
+                    
+                    let item = document.data()
+                    
+                    if  item["id"] as! Int == id {
+                        self.documentID = document.documentID
+                        self.buttonSave.setTitle("DELETE", for: .normal)
+                        self.buttonSave.titleLabel?.textAlignment = .center
+                        self.buttonSave.backgroundColor = .red
+                        self.state = true
+                        
+                    }
+                   
+                }
+                // üst kısım ekran açılınca çalışacak, sonuca göre buton rengi değişecek
+               // bu alt kısım butona tıklayınca olacak
+               // self.doSomething(state: state)
+            }
+        }
+    }
     
-    
+    func doSomething(state: Bool) {
+        if state {
+            // remove
+            
+            print("ZATEN FAVORİLERDE")
+            db.collection("Favorites").document(documentID!).delete() { err in
+                if let err = err {
+                    print("Error removing document: \(err)")
+                } else {
+                    print("Document successfully removed!")
+                    self.buttonSave.setTitle("ADD FAVORITES", for: .normal)
+                    self.buttonSave.titleLabel?.textAlignment = .center
+                    self.buttonSave.backgroundColor = .systemGreen
+                }
+            }
+        } else {
+            // add
+            db.collection("Favorites").addDocument(data: [
+                "id" : detail?.id as Any,
+                "title" : detail?.title as Any,
+                "summary_text" : detail?.summary as Any,
+                "image" : detail?.image as Any,
+                "vegan" : detail?.vegan as Any,
+                "serving_time" : detail?.servings as Any,
+                "mail" : Auth.auth().currentUser?.email as Any]) { (error) in
+                    
+                    if let error = error {
+                        print(error.localizedDescription)
+                    } else {
+                        print("FAVORİLERE EKLENDİ")
+                        self.buttonSave.setTitle("DELETE", for: .normal)
+                        self.buttonSave.titleLabel?.textAlignment = .center
+                        self.buttonSave.backgroundColor = .red
+                    }
+                }
+        }
+    }
 }
 
 
 
+// MARK: -
 
 
-//       db.collection("Favorites").addDocument(data: [
-//            "id" : detail?.id as Any,
-//            "title" : detail?.title as Any,
-//            "summary_text" : detail?.summary as Any,
-//            "image" : detail?.image as Any,
-//            "vegan" : detail?.vegan as Any,
-//            "serving_time" : detail?.servings as Any,
-//            "mail" : Auth.auth().currentUser?.email as Any]) { (error) in
-//
-//                if let error = error {
-//                    print(error.localizedDescription)
-//                } else {
-//                    self.buttonSave.titleLabel?.text = "DELETE"
-//                    self.buttonSave.titleLabel?.textAlignment = .center
-//                    self.buttonSave.backgroundColor = .red
-//                }
-//            }

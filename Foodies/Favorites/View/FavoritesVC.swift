@@ -21,7 +21,16 @@ class FavoritesVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        
         getFavorites()
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        favoritesData.removeAll()
     }
 
     private func setupUI() {
@@ -44,7 +53,7 @@ class FavoritesVC: UIViewController {
                     
                     self.favoritesData.append(baseModel)
                     // item["id"] as! Int == (self.detail?.id)!
-                    //  print("\(document.documentID) => \(document.data())")
+                      print("\(document.documentID)")
                     
                     if self.counter == querySnapshot!.documents.count {
                         self.counter = 0
