@@ -61,7 +61,6 @@ class DetailsVC: UIViewController {
     
     @IBAction func saveButtonTapped(_ sender: Any) {
         guard let state = state else {
-            print("GUARD")
             return
             
         }
@@ -69,7 +68,6 @@ class DetailsVC: UIViewController {
     }
     
     private func checkFavorites(id: Int) {
-        state = false
         db.collection("Favorites").whereField("mail", isEqualTo: Auth.auth().currentUser?.email as Any).getDocuments() { (querySnapshot, err) in
             if let err = err {
                 print("Error getting documents: \(err)")
@@ -84,13 +82,12 @@ class DetailsVC: UIViewController {
                         self.buttonSave.titleLabel?.textAlignment = .center
                         self.buttonSave.backgroundColor = .red
                         self.state = true
-                        
                     }
-                   
                 }
-                // üst kısım ekran açılınca çalışacak, sonuca göre buton rengi değişecek
-               // bu alt kısım butona tıklayınca olacak
-               // self.doSomething(state: state)
+                
+                if self.state == nil {
+                    self.state = false
+                }
             }
         }
     }
@@ -98,8 +95,6 @@ class DetailsVC: UIViewController {
     func doSomething(state: Bool) {
         if state {
             // remove
-            
-            print("ZATEN FAVORİLERDE")
             db.collection("Favorites").document(documentID!).delete() { err in
                 if let err = err {
                     print("Error removing document: \(err)")
@@ -133,9 +128,4 @@ class DetailsVC: UIViewController {
         }
     }
 }
-
-
-
-// MARK: -
-
 

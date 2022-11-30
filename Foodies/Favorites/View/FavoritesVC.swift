@@ -53,8 +53,7 @@ class FavoritesVC: UIViewController {
                     
                     self.favoritesData.append(baseModel)
                     // item["id"] as! Int == (self.detail?.id)!
-                      print("\(document.documentID)")
-                    
+               //       print("\(document.documentID)")
                     if self.counter == querySnapshot!.documents.count {
                         self.counter = 0
                         self.favoritesTableView.reloadData()
