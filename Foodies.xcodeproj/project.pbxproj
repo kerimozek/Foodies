@@ -350,7 +350,8 @@
 				6E1E9D98293399930012E157 /* Dinner */,
 				6E98E68E29328BA400EE2064 /* Core */,
 			);
-			path = NetworkLayer;
+			name = NetworkLayer;
+			path = Foodies/NetworkLayer;
 			sourceTree = "<group>";
 		};
 		6E98E68E29328BA400EE2064 /* Core */ = {
