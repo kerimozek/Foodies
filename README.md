@@ -41,8 +41,10 @@
 - Kingfisher
 - Firestore
 
+### Please click on the image below to watch the promotional video of the application. 
+
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=sbnPapUF2Ys" target="_blank"><img src="http://img.youtube.com/vi/sbnPapUF2Ys/0.jpg" 
-alt="FOODIES APP" width="180" height="240" border="5" /></a>
+alt="FOODIES APP" width="480" height="360" border="5" /></a>
   
   
   
