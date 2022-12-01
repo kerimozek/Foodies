@@ -25,21 +25,3 @@ struct Sweets: Codable, BaseModel {
     var summary: String?
     var instructions: String?
 }
-
-
-// MARK: - MainModel -
-struct DinnerRecipe: Codable {
-    let results: [Dinner]?
-}
-
-struct Dinner: Codable, BaseModel {
-    var id: Int?
-    var title: String?
-    var image: String?
-    var readyInMinutes: Int?
-    var servings: Int?
-    var pricePerServing: Double?
-    var vegetarian, vegan, glutenFree, dairyFree: Bool?
-    var summary: String?
-    var instructions: String?
-}

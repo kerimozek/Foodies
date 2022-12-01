@@ -11,7 +11,7 @@ import Firebase
 import FirebaseFirestore
 
 class DetailsVC: UIViewController {
- 
+    
     @IBOutlet weak var detailTitle: UILabel!
     @IBOutlet weak var categoryLabel: UILabel!
     @IBOutlet weak var detailImage: UIImageView!
@@ -24,47 +24,40 @@ class DetailsVC: UIViewController {
     var db = Firestore.firestore()
     var documentID: String?
     var state: Bool!
-    
     private var control = false
     
-    
-    
     override func viewDidLoad() {
-        
         super.viewDidLoad()
-        summaryText.isEditable = false
-        servingTime.text = "Serving Time: \(detail?.servings ?? 31) Minutes"
-        summaryText.attributedText = detail?.summary?.convertHtmlToAttributedStringWithCSS(font: UIFont(name: "Arial", size: 14), csscolor: "black", lineheight: 5, csstextalign: "left")
-        buttonSave.layer.cornerRadius = 8
-        detailTitle.text = detail?.title
-        let image = "https://i.dlpng.com/static/png/7210818_preview.png"
-        self.detailImage.kf.setImage(with: URL(string: detail?.image ?? image))
-        categoryLabel.text = "\(detail?.id ?? 31)"
-        
-        detailView.backgroundColor = UIColor(red: 0.60, green: 0.66, blue: 0.97, alpha: 1.00)
-        detailView.layer.cornerRadius = 10
-        detailView.layer.shadowColor = UIColor.darkGray.cgColor
-        detailView.layer.shadowOffset = CGSize(width: 3.0, height: 3.0)
-        detailView.layer.shadowRadius = 4.0
-        detailView.layer.shadowOpacity = 0.4
-        
-        detailImage.layer.cornerRadius = 10
-        detailImage.clipsToBounds = true
+        setupUI()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         checkFavorites(id: (detail?.id)!)
     }
     
-    
-     
+    private func setupUI() {
+        summaryText.isEditable = false
+        servingTime.text = "Serving Time: \(detail?.servings ?? 31) Minutes"
+        summaryText.attributedText = detail?.summary?.convertHtmlToAttributedStringWithCSS(font: UIFont(name: "Arial", size: 14), csscolor: "black", lineheight: 5, csstextalign: "left")
+        buttonSave.layer.cornerRadius = 8
+        detailTitle.text = detail?.title
+        let image = "https://food-images.files.bbci.co.uk/food/recipes/one_pan_saltimbocca_alla_71615_16x9.jpg"
+        self.detailImage.kf.setImage(with: URL(string: detail?.image ?? image))
+        categoryLabel.text = "\(detail?.id ?? 31)"
+        detailView.backgroundColor = UIColor(red: 0.60, green: 0.66, blue: 0.97, alpha: 1.00)
+        detailView.layer.cornerRadius = 10
+        detailView.layer.shadowColor = UIColor.darkGray.cgColor
+        detailView.layer.shadowOffset = CGSize(width: 3.0, height: 3.0)
+        detailView.layer.shadowRadius = 4.0
+        detailView.layer.shadowOpacity = 0.4
+        detailImage.layer.cornerRadius = 10
+        detailImage.clipsToBounds = true
+    }
     
     @IBAction func saveButtonTapped(_ sender: Any) {
-        guard let state = state else {
-            return
-            
-        }
-        doSomething(state: state)
+        guard let state = state else { return }
+        addRemove(state: state)
+        navigationController?.popViewController(animated: true)
     }
     
     private func checkFavorites(id: Int) {
@@ -73,10 +66,8 @@ class DetailsVC: UIViewController {
                 print("Error getting documents: \(err)")
             } else {
                 for document in querySnapshot!.documents {
-                    
                     let item = document.data()
-                    
-                    if  item["id"] as! Int == id {
+                    if item["id"] as! Int == id {
                         self.documentID = document.documentID
                         self.buttonSave.setTitle("DELETE", for: .normal)
                         self.buttonSave.titleLabel?.textAlignment = .center
@@ -84,7 +75,6 @@ class DetailsVC: UIViewController {
                         self.state = true
                     }
                 }
-                
                 if self.state == nil {
                     self.state = false
                 }
@@ -92,7 +82,7 @@ class DetailsVC: UIViewController {
         }
     }
     
-    func doSomething(state: Bool) {
+    func addRemove(state: Bool) {
         if state {
             // remove
             db.collection("Favorites").document(documentID!).delete() { err in

@@ -21,12 +21,11 @@ class FavoritesVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        
         getFavorites()
+        favoritesTableView.reloadData()
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -49,11 +48,10 @@ class FavoritesVC: UIViewController {
                     let item = document.data()
                     let baseModel: Favorite = .init(id: item["id"] as? Int,
                                                     title: item["title"] as? String,
-                                                    image: item["image"] as? String)
-                    
+                                                    image: item["image"] as? String,
+                                                    servings: item["serving_time"] as? Int,
+                                                    summary: item["summary_text"] as? String)
                     self.favoritesData.append(baseModel)
-                    // item["id"] as! Int == (self.detail?.id)!
-               //       print("\(document.documentID)")
                     if self.counter == querySnapshot!.documents.count {
                         self.counter = 0
                         self.favoritesTableView.reloadData()
@@ -62,8 +60,6 @@ class FavoritesVC: UIViewController {
             }
         }
     }
-    
-    
 
     @IBAction func logOutButtonTapped(_ sender: Any) {
         do {

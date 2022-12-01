@@ -32,7 +32,7 @@ class RandomCell: UITableViewCell {
     }
 
     func configureCell(item: BaseModel) {
-        let image = "https://i.dlpng.com/static/png/7210818_preview.png"
+        let image = "https://food-images.files.bbci.co.uk/food/recipes/one_pan_saltimbocca_alla_71615_16x9.jpg"
         self.randomTitle.text = item.title
         self.randomImageView.kf.setImage(with: URL(string: item.image ?? image))
     }

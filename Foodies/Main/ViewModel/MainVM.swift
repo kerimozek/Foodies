@@ -19,7 +19,7 @@ class MainViewModel {
     private init () { }
     
     var sweets: [Sweets] = []
-    var dinner: [Dinner] = []
+    var dinner: [Sweets] = []
 
     func getSweetsItems(complete: @escaping((String?)->())) {
         SweetsManager.shared.getSweets { items, errorMessage in
@@ -37,7 +37,7 @@ class MainViewModel {
         DinnerManager.shared.getDinner { items, errorMessage in
             
             if let items = items {
-                self.dinner = items.results!
+                self.dinner = items.recipes!
                 self.delegate?.didGetDinner(isDone: true)
             }
             complete(errorMessage)

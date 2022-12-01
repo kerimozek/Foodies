@@ -207,13 +207,6 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		6E42A1052933FCD4006EA37D /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
 		6E42A10A2933FEB6006EA37D /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -414,7 +407,6 @@
 			children = (
 				6E42A1042933FCD0006EA37D /* Model */,
 				6E42A1032933FCC4006EA37D /* View */,
-				6E42A1052933FCD4006EA37D /* ViewModel */,
 			);
 			name = Favorites;
 			path = Foodies/Favorites;

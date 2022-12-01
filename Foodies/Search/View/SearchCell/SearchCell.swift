@@ -12,8 +12,6 @@ class SearchCell: UITableViewCell {
 
     @IBOutlet weak var searchView: DropShadowView!
     @IBOutlet weak var priceLabel: UILabel!
-    @IBOutlet weak var minuteLabel: UILabel!
-    @IBOutlet weak var pointLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var searchImageView: UIImageView!
@@ -36,9 +34,11 @@ class SearchCell: UITableViewCell {
     }
 
     func configureCell(item: Search) {
-        let image = "https://i.dlpng.com/static/png/7210818_preview.png"
+        let image = "https://food-images.files.bbci.co.uk/food/recipes/one_pan_saltimbocca_alla_71615_16x9.jpg"
         self.titleLabel.text = item.title
         self.searchImageView.kf.setImage(with: URL(string: item.image ?? image))
+        self.priceLabel.text = "Serving Time: \(item.servings ?? 31) Minutes"
+                 
     }
     
 }

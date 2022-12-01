@@ -33,11 +33,11 @@ class BottomCell: UICollectionViewCell {
     }
     
     
-    func configureCell(item: Dinner) {
-        let image = "https://i.dlpng.com/static/png/7210818_preview.png"
+    func configureCell(item: Sweets) {
+        let image = "https://food-images.files.bbci.co.uk/food/recipes/one_pan_saltimbocca_alla_71615_16x9.jpg"
         self.titleLabel.text = item.title
         self.bottomImageView.kf.setImage(with: URL(string: item.image ?? image))
-        self.pointLabel.text = "\(String(describing: item.id))"
+        self.pointLabel.text = "Serving: \(item.servings ?? 31) Minutes"
         
     }
 

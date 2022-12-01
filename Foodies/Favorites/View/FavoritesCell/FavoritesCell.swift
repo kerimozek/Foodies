@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class FavoritesCell: UITableViewCell {
 
@@ -34,8 +35,10 @@ class FavoritesCell: UITableViewCell {
     }
  
     func configureCell(item: Favorite) {
-        let image = "https://i.dlpng.com/static/png/7210818_preview.png"
+        let image = "https://food-images.files.bbci.co.uk/food/recipes/one_pan_saltimbocca_alla_71615_16x9.jpg"
         self.titleLabel.text = item.title
         self.favoritesImageView.kf.setImage(with: URL(string: item.image ?? image))
+        self.pointLabel.text = "Serving Time: \(item.servings ?? 31) Minutes"
+        self.detailLabel.text = "\(item.id ?? 31)"
     }
 }

@@ -11,12 +11,12 @@ class DinnerManager {
     
     static let shared = DinnerManager()
     
-    // MARK: - MAIN BOTTOM API "https://api.spoonacular.com/recipes/random?number=12&apiKey=f77c23f74bad484cb7d04e9d5070b3dc" -
+    // MARK: - API "https://api.spoonacular.com/recipes/random?number=16&apiKey=f77c23f74bad484cb7d04e9d5070b3dc" -
     
-    let url = "\(NetworkHelper.shared.baseUrl)complexSearch?apiKey=6190a837e2cd420cbf41a6b7d5a14eb6"
+    let url = "\(NetworkHelper.shared.baseUrl)random?number=16&apiKey=6190a837e2cd420cbf41a6b7d5a14eb6"
     
-    func getDinner(complete: @escaping((DinnerRecipe?, String?)->())) {
-        NetworkManager.shared.request(type: DinnerRecipe.self,
+    func getDinner(complete: @escaping((SweetRecipes?, String?)->())) {
+        NetworkManager.shared.request(type: SweetRecipes.self,
                                       url: url,
                                       method: .get) { response in
             switch response {

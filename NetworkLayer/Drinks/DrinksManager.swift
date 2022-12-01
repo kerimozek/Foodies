@@ -11,9 +11,9 @@ class DrinksManager {
     
     static let shared = DrinksManager()
     
-    // MARK: - MAIN BOTTOM API "https://api.spoonacular.com/recipes/random?number=12&apiKey=f77c23f74bad484cb7d04e9d5070b3dc" -
+    // MARK: - API "https://api.spoonacular.com/recipes/random?number=16&apiKey=f77c23f74bad484cb7d04e9d5070b3dc" -
     
-    let url = "\(NetworkHelper.shared.baseUrl)random?number=20&apiKey=f77c23f74bad484cb7d04e9d5070b3dc"
+    let url = "\(NetworkHelper.shared.baseUrl)random?number=16&apiKey=f77c23f74bad484cb7d04e9d5070b3dc"
     
     func getDrinks(complete: @escaping((SearchRecipes?, String?)->())) {
         NetworkManager.shared.request(type: SearchRecipes.self,
