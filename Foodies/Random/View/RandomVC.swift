@@ -61,7 +61,6 @@ class RandomVC: UIViewController {
         let itemDinner = RandomViewModel.shared.dinner.shuffled().first
         let itemSweets = RandomViewModel.shared.sweets.shuffled().first
         let itemDrinks = RandomViewModel.shared.drinks.shuffled().first
-     //   medetcan.append(.init(id: itemDinner?.id, title: itemDinner?.title, image: itemDinner?.image))
         baseList.append(itemDinner!)
         baseList.append(itemSweets!)
         baseList.append(itemDrinks!)
